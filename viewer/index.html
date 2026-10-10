@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>帧动画浏览器</title>
+<link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand"><span class="logo">▚</span> 帧动画浏览器</div>
+  <div class="search">
+    <input id="search" type="search" placeholder="搜索动画 / 动作 / 文件名…" autocomplete="off">
+  </div>
+  <label class="chk"><input type="checkbox" id="hideArchive" checked> 隐藏归档</label>
+  <div class="tabs">
+    <button class="tab active" data-view="player">播放器</button>
+    <button class="tab" data-view="grid">帧网格</button>
+    <button class="tab" data-view="sheet">图集</button>
+  </div>
+  <button class="btn" id="refreshBtn" title="重新扫描目录">⟳ 重新扫描</button>
+  <button class="btn" id="helpBtn" title="快捷键说明">?</button>
+  <span class="stat" id="stat"></span>
+</header>
+
+<main>
+  <aside class="sidebar" id="sidebar">
+    <div class="tree" id="tree"></div>
+  </aside>
+
+  <section class="content">
+    <div class="empty" id="empty">
+      <div class="empty-icon">▚</div>
+      <p>从左侧选择一个动画集</p>
+      <p class="dim" id="emptyHint"></p>
+    </div>
+
+    <div class="workspace" id="workspace" hidden>
+      <div class="meta-head">
+        <div class="title-block">
+          <h1 id="setTitle">—</h1>
+          <div class="dim small" id="setPath"></div>
+        </div>
+        <div class="spacer"></div>
+        <div class="clips" id="clips"></div>
+        <button class="btn" id="openDirBtn" title="在系统文件管理器中打开">📁 打开文件夹</button>
+        <button class="btn" id="gifBtn" title="把当前动作导出为 GIF">导出 GIF</button>
+      </div>
+
+      <div class="desc" id="setDesc" hidden></div>
+
+      <div class="stage-area" id="stageArea">
+        <div class="stage-wrap" id="stageWrap">
+          <canvas id="stage"></canvas>
+        </div>
+        <div class="stage-corner" id="stageCorner"></div>
+      </div>
+
+      <div class="controls">
+        <div class="ctrl-group transport">
+          <button class="btn icon" id="btnFirst" title="首帧 (Home)">⏮</button>
+          <button class="btn icon" id="btnPrev" title="上一帧 (←)">◀</button>
+          <button class="btn icon primary" id="btnPlay" title="播放 / 暂停 (空格)">▶</button>
+          <button class="btn icon" id="btnNext" title="下一帧 (→)">▶|</button>
+          <button class="btn icon" id="btnLast" title="末帧 (End)">⏭</button>
+        </div>
+
+        <div class="ctrl-group">
+          <span class="label">帧</span>
+          <input type="range" id="frameRange" min="0" max="0" value="0">
+          <span class="mono" id="frameLabel">0 / 0</span>
+        </div>
+
+        <div class="ctrl-group">
+          <span class="label">FPS</span>
+          <input type="range" id="fpsRange" min="1" max="30" value="12" step="1">
+          <span class="mono" id="fpsLabel">12</span>
+        </div>
+
+        <div class="ctrl-group">
+          <span class="label">缩放</span>
+          <select id="zoomSel">
+            <option value="0" selected>适应</option>
+            <option value="1">1x</option><option value="2">2x</option>
+            <option value="4">4x</option><option value="6">6x</option>
+            <option value="8">8x</option><option value="12">12x</option>
+            <option value="16">16x</option>
+          </select>
+          <span class="label">背景</span>
+          <select id="bgSel">
+            <option value="checker" selected>棋盘格</option>
+            <option value="dark">深色</option>
+            <option value="light">浅色</option>
+            <option value="green">绿幕</option>
+            <option value="magenta">品红</option>
+          </select>
+        </div>
+
+        <div class="ctrl-group toggles">
+          <label class="chk"><input type="checkbox" id="loopChk" checked> 循环</label>
+          <label class="chk"><input type="checkbox" id="pingChk"> 往复</label>
+          <label class="chk"><input type="checkbox" id="onionChk"> 洋葱皮</label>
+          <label class="chk"><input type="checkbox" id="gridChk"> 网格</label>
+        </div>
+      </div>
+
+      <div class="frame-info" id="frameInfo"></div>
+
+      <div class="filmstrip-wrap">
+        <div class="filmstrip" id="filmstrip"></div>
+      </div>
+
+      <div class="grid-view" id="gridView" hidden></div>
+
+      <div class="sheet-view" id="sheetView" hidden>
+        <div class="sheet-canvas" id="sheetCanvas"></div>
+        <div class="dim small" id="sheetNote"></div>
+      </div>
+
+      <div class="palette-row" id="paletteRow"></div>
+    </div>
+  </section>
+</main>
+
+<div class="modal" id="helpModal" hidden>
+  <div class="modal-box">
+    <h2>快捷键</h2>
+    <table>
+      <tr><td><kbd>空格</kbd></td><td>播放 / 暂停</td></tr>
+      <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>上一帧 / 下一帧（按住 Shift 跳 5 帧）</td></tr>
+      <tr><td><kbd>Home</kbd> <kbd>End</kbd></td><td>首帧 / 末帧</td></tr>
+      <tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>FPS ±1</td></tr>
+      <tr><td><kbd>+</kbd> <kbd>-</kbd></td><td>缩放 + / −</td></tr>
+      <tr><td><kbd>F</kbd></td><td>适应窗口</td></tr>
+      <tr><td><kbd>O</kbd></td><td>洋葱皮（叠上一帧残影）</td></tr>
+      <tr><td><kbd>G</kbd></td><td>像素网格</td></tr>
+      <tr><td><kbd>1</kbd>…<kbd>4</kbd></td><td>切换播放器 / 帧网格 / 图集视图</td></tr>
+      <tr><td><kbd>/</kbd></td><td>聚焦搜索框</td></tr>
+    </table>
+    <div class="modal-foot"><button class="btn" id="helpClose">关闭</button></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="data.js"></script>
+<script src="viewer.js"></script>
+</body>
+</html>

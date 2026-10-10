@@ -1,0 +1,77 @@
+{
+  "frames": [
+    {
+      "file": "frames/dodge_0.png",
+      "id": "dodge_0",
+      "order": 0,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "790a7036699389c805a70a8c8071fa00cce5d711840f667bd7734f8a3a71b812"
+    },
+    {
+      "file": "frames/dodge_1.png",
+      "id": "dodge_1",
+      "order": 1,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "0b38015756d93cfbf7054b378b64a7583babfee1a6e9a6ab68be43b86b3a57c4"
+    },
+    {
+      "file": "frames/dodge_2.png",
+      "id": "dodge_2",
+      "order": 2,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "688dc0ce7118eb97095019fb9fb94fa73a6470f5aeafc2e36cb6320517a5f1e1"
+    },
+    {
+      "file": "frames/dodge_3.png",
+      "id": "dodge_3",
+      "order": 3,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "722d1f67c9c7cf5b650d5f76491aa1528cc26f67172c367686308f5aef69f216"
+    }
+  ],
+  "layout": "single-row",
+  "origin_convention": "top-left; positive x right, positive y down",
+  "project_id": "cloud-archer-dodge",
+  "revision": 1,
+  "schema": "pixel-atlas/1",
+  "size": [
+    256,
+    64
+  ]
+}

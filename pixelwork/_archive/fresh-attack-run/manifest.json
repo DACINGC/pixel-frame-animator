@@ -1,0 +1,62 @@
+{
+  "complete": true,
+  "files": {
+    "README.md": {
+      "bytes": 310,
+      "sha256": "fea0bef2334f189cc3089788c2f1fb1f041a82500779079c5af507133fcaf332"
+    },
+    "atlas.json": {
+      "bytes": 2612,
+      "sha256": "f5e18a90aecf291ae09348cc4e5e60d88b443a7a6ff38c0d24e7c53c998852d0"
+    },
+    "changes.json": {
+      "bytes": 87,
+      "sha256": "ae7f89f9f3f4c208b1bdbc30985d3029b47598bb359e020012a3a930d604b825"
+    },
+    "contact-sheet-8x.png": {
+      "bytes": 15979,
+      "sha256": "6708eb0e50b25473d21b9a29e2a197e1f4bf94cf5c4d184ec09a8bf40128bde5"
+    },
+    "frames/attack_0.png": {
+      "bytes": 1179,
+      "sha256": "e5dc03baf4f2293ddaac8c2c26097712ac82f8fb91df37602f769e74d2867df0"
+    },
+    "frames/attack_1.png": {
+      "bytes": 1225,
+      "sha256": "0428e1d7d090df95986a724e157d3ee303f7c603ae96573deb416eaba5660831"
+    },
+    "frames/attack_2.png": {
+      "bytes": 1246,
+      "sha256": "d3268f6bfc53b53f7e0cd74e0c162362a9dcb81fbcd19a5c077e66f936ca0bcd"
+    },
+    "frames/attack_3.png": {
+      "bytes": 1249,
+      "sha256": "4925657a69e15a5ce136260aee8336b24ae9f03c84db59e0e484c1c6967ef6b3"
+    },
+    "frames/run_0.png": {
+      "bytes": 1187,
+      "sha256": "9cb1a5e2fad58c504fabd09b89595693c1227b073b2c0fa1d045d5c946ad64c2"
+    },
+    "frames/run_1.png": {
+      "bytes": 1135,
+      "sha256": "718250e259c66da9dbefa23375eaab7089ce55e5e75b7b4b8bcb0ea9ba2badc1"
+    },
+    "frames/run_2.png": {
+      "bytes": 1190,
+      "sha256": "59617dcf3118d5303649009c8754a3ae513b985520035926b576a0cb2dcc2824"
+    },
+    "frames/run_3.png": {
+      "bytes": 1144,
+      "sha256": "644d3c82b65a9de7d9f7bc5d2b18f481277f8b5254162de29cb2b118ced6dcd5"
+    },
+    "project.json": {
+      "bytes": 268437,
+      "sha256": "242f1cdf10ce47eda467ae0d77db52fdf4ff084ebadd8948b12da77cbd2bb0b9"
+    },
+    "sprite-sheet.png": {
+      "bytes": 3591,
+      "sha256": "608cdd99008746aba97e2d4f904edfaa030da8fb2c02d75e322f7740a31450e4"
+    }
+  },
+  "schema": "pixel-delivery/1"
+}

@@ -1,0 +1,141 @@
+{
+  "frames": [
+    {
+      "file": "frames/walk_0.png",
+      "id": "walk_0",
+      "order": 0,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "c48819cda982d7c6a1fd6f3c57c5ee14e4adb7eb218dac6f2fe0a5403a03310b"
+    },
+    {
+      "file": "frames/walk_1.png",
+      "id": "walk_1",
+      "order": 1,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "224b994d1f77c51f263ebdd1069d0599991057b928f17afd341678250058b494"
+    },
+    {
+      "file": "frames/walk_2.png",
+      "id": "walk_2",
+      "order": 2,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "04cf4519c15e270ca4ef6e6ba9781e1bbc41b563453e44ccb3fb7ba263cda1ed"
+    },
+    {
+      "file": "frames/walk_3.png",
+      "id": "walk_3",
+      "order": 3,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "224b994d1f77c51f263ebdd1069d0599991057b928f17afd341678250058b494"
+    },
+    {
+      "file": "frames/jump_0.png",
+      "id": "jump_0",
+      "order": 4,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "5a88efd1c449abb7acbd351a55a8abffa68d8e8d2bc14f84b470aaaa0f8d1d68"
+    },
+    {
+      "file": "frames/jump_1.png",
+      "id": "jump_1",
+      "order": 5,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "f2e3d2919dd5438e77a96cc4a55ab9c0e17ffcab1e404f127bc466037dc0d6f6"
+    },
+    {
+      "file": "frames/jump_2.png",
+      "id": "jump_2",
+      "order": 6,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        384,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "bf18ae9b3f7337401395fc26fbcb6f3b6ab87d416ec8f2745458533b7671f4e8"
+    },
+    {
+      "file": "frames/jump_3.png",
+      "id": "jump_3",
+      "order": 7,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        448,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "f34a8cbe3972f5292113bf9de0acc63f8cffe6752fccc58acbad190b7800b727"
+    }
+  ],
+  "layout": "single-row",
+  "origin_convention": "top-left; positive x right, positive y down",
+  "project_id": "cloud-archer-walk-jump",
+  "revision": 1,
+  "schema": "pixel-atlas/1",
+  "size": [
+    512,
+    64
+  ]
+}

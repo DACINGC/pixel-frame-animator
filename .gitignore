@@ -1,0 +1,28 @@
+# ---- WorkBuddy 本地工程数据（含会话记忆，不含源码）----
+.workbuddy/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# ---- 生成产物 ----
+# 帧动画浏览器导出的 GIF
+viewer/exports/
+# 模板脚本的默认输出目录
+demo-output/
+pixelwork/template/demo-output/
+# 离线兜底索引（运行 `python viewer/scan.py --static` 重新生成，含本机绝对路径）
+viewer/data.js
+
+# ---- 操作系统 / 编辑器 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

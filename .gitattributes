@@ -1,0 +1,12 @@
+# 统一换行：仓库内一律存 LF，按平台检出
+* text=auto
+
+# shell 脚本必须 LF，否则 Linux/macOS 执行报 bad interpreter
+*.sh  text eol=lf
+# 批处理需要 CRLF
+*.bat text eol=crlf
+
+# 二进制，禁止任何换行转换
+*.png binary
+*.gif binary
+*.zip binary

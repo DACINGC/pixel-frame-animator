@@ -1,0 +1,62 @@
+{
+  "complete": true,
+  "files": {
+    "README.md": {
+      "bytes": 310,
+      "sha256": "fea0bef2334f189cc3089788c2f1fb1f041a82500779079c5af507133fcaf332"
+    },
+    "atlas.json": {
+      "bytes": 2603,
+      "sha256": "8173f6cb651788bf8779a7ba47138d98aa867ffdb62a6e4ad135bbe71129a13d"
+    },
+    "changes.json": {
+      "bytes": 87,
+      "sha256": "ae7f89f9f3f4c208b1bdbc30985d3029b47598bb359e020012a3a930d604b825"
+    },
+    "contact-sheet-8x.png": {
+      "bytes": 18095,
+      "sha256": "56ab60f9f7ab650154e5c5e876db7b760af43e935fdcf754fdb425ff313c38be"
+    },
+    "frames/jump_0.png": {
+      "bytes": 1151,
+      "sha256": "354a12d16ede56eb81be859d9df97b836377186bdd6195209379dbc7a509475d"
+    },
+    "frames/jump_1.png": {
+      "bytes": 1174,
+      "sha256": "0610379e558279579bcf27e0b66f0a56ef84e2a921fab7c41f04913be57d5fbf"
+    },
+    "frames/jump_2.png": {
+      "bytes": 1139,
+      "sha256": "1ba8581ea66f087923463aabc92424defe4afb4aba01f05a17770f43e41e796c"
+    },
+    "frames/jump_3.png": {
+      "bytes": 1199,
+      "sha256": "0638a49951009ac0f0e1058d9971a11d1195f2fd1cc8ed335e68924e849e0c00"
+    },
+    "frames/walk_0.png": {
+      "bytes": 1158,
+      "sha256": "8f1a3847f17b3f19c37180c63a035a328800fa813f483353ce6f78d258af1e45"
+    },
+    "frames/walk_1.png": {
+      "bytes": 1178,
+      "sha256": "452dda8841bd1b862ef9c327b30b6c6291b40d0a8057e8f1acd083a4e708e597"
+    },
+    "frames/walk_2.png": {
+      "bytes": 1144,
+      "sha256": "bce8bfc90173ed5ce626b49c63575c645172298dfcc730b79b790821508b28ae"
+    },
+    "frames/walk_3.png": {
+      "bytes": 1178,
+      "sha256": "452dda8841bd1b862ef9c327b30b6c6291b40d0a8057e8f1acd083a4e708e597"
+    },
+    "project.json": {
+      "bytes": 268240,
+      "sha256": "ce2b58f958273c915ae1be556714f750c9abd5cc5f6efc3cc25d2f736918cc67"
+    },
+    "sprite-sheet.png": {
+      "bytes": 3262,
+      "sha256": "2347d7e258cbfd96c55cfc9dfc78834470b295e384e8897e881d2149a6360191"
+    }
+  },
+  "schema": "pixel-delivery/1"
+}

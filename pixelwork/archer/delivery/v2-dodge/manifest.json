@@ -1,0 +1,46 @@
+{
+  "complete": true,
+  "files": {
+    "README.md": {
+      "bytes": 310,
+      "sha256": "fea0bef2334f189cc3089788c2f1fb1f041a82500779079c5af507133fcaf332"
+    },
+    "atlas.json": {
+      "bytes": 1423,
+      "sha256": "3f031c55d9400ae0f29ca8fc75f5df5e6d124a5867b967bef92d7408913b313f"
+    },
+    "changes.json": {
+      "bytes": 87,
+      "sha256": "ae7f89f9f3f4c208b1bdbc30985d3029b47598bb359e020012a3a930d604b825"
+    },
+    "contact-sheet-8x.png": {
+      "bytes": 10384,
+      "sha256": "25dd5e720c7fac7934e8b0a468c500ec4ac7b872373d80ef9f9727b8ae0c7110"
+    },
+    "frames/dodge_0.png": {
+      "bytes": 1206,
+      "sha256": "e99bc6b21dc2c8ab836746b5d1589b59e4ad3b52b0ed1c541884bd72cba7bc42"
+    },
+    "frames/dodge_1.png": {
+      "bytes": 1243,
+      "sha256": "bc03a3dc1f85fd75234435f13f4507013256d1883705ad48cf557ee59c83d21a"
+    },
+    "frames/dodge_2.png": {
+      "bytes": 1165,
+      "sha256": "71bc72c3ae01aff1a6b64428b6d444d6120faa1d952d5309717d148eadc11e35"
+    },
+    "frames/dodge_3.png": {
+      "bytes": 1238,
+      "sha256": "1c1a033dd012fc27c4fbf227a3b08fa658d0b353ffb3399e40adb687807f6c3c"
+    },
+    "project.json": {
+      "bytes": 134654,
+      "sha256": "50723294f94d49b46c7cacc7c1855b589447887db54f1cfe473b8ce8c49abdd3"
+    },
+    "sprite-sheet.png": {
+      "bytes": 2555,
+      "sha256": "9291fc84c28c6bc04f2f0afc12d7e7eadb46d8e234b3178725a4e3fc6abb9c13"
+    }
+  },
+  "schema": "pixel-delivery/1"
+}

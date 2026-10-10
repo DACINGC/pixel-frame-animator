@@ -1,0 +1,141 @@
+{
+  "frames": [
+    {
+      "file": "frames/attack_0.png",
+      "id": "attack_0",
+      "order": 0,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "00c0133f965404b2029e953dbcc3d9bf4f231aab20cef7887f839a17538094b2"
+    },
+    {
+      "file": "frames/attack_1.png",
+      "id": "attack_1",
+      "order": 1,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "2141e456612381538caa0380514589a625cfb363fb9b04670e7e7f1537918d57"
+    },
+    {
+      "file": "frames/attack_2.png",
+      "id": "attack_2",
+      "order": 2,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "c6c928b52181f5d0a1e9c8a7a28fe721d9880d8435b9bcf02501b09bdf7f5d60"
+    },
+    {
+      "file": "frames/attack_3.png",
+      "id": "attack_3",
+      "order": 3,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "c3a8be1ef22e255cf6bccca112b5f73fed47687dc0439693ac134c8e751e85e6"
+    },
+    {
+      "file": "frames/run_0.png",
+      "id": "run_0",
+      "order": 4,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "4330798ba3b0dc5c1ea49a06382f013c6151af64198126e1da87e98a2ce7fba3"
+    },
+    {
+      "file": "frames/run_1.png",
+      "id": "run_1",
+      "order": 5,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "50f09b4763a47e2c366c06dad051ddb3c0670b34c069165d15027a64ed7e7133"
+    },
+    {
+      "file": "frames/run_2.png",
+      "id": "run_2",
+      "order": 6,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        384,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "32fdc8a0c9c3f310d16a7cfecd15f387305107fb559c2e8cf7fa1632b55fa2e0"
+    },
+    {
+      "file": "frames/run_3.png",
+      "id": "run_3",
+      "order": 7,
+      "origin": [
+        0,
+        0
+      ],
+      "rect": [
+        448,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "e0cfcdf784c2803cad722664fc5cce396257d4ef4e7d00e6499e6716eeb649f3"
+    }
+  ],
+  "layout": "single-row",
+  "origin_convention": "top-left; positive x right, positive y down",
+  "project_id": "cloud-archer-attack-run",
+  "revision": 1,
+  "schema": "pixel-atlas/1",
+  "size": [
+    512,
+    64
+  ]
+}

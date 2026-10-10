@@ -1,0 +1,89 @@
+{
+  "title": "原创像素弓箭手·云纹游侠 —— 死亡动画 6 帧",
+  "size": [
+    384,
+    64
+  ],
+  "frame_size": 64,
+  "palette_size": 16,
+  "frames": [
+    {
+      "id": "death_0",
+      "action": "death",
+      "order": 0,
+      "file": "frames/death_0.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "0030c99259122765db09d89a124c5a3d017b70535f4066248d603ebd68f5202f"
+    },
+    {
+      "id": "death_1",
+      "action": "death",
+      "order": 1,
+      "file": "frames/death_1.png",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "961b720d27b1b3ffa72fee5977ae1a07c113d0aa944dacf4c75cc0a7d113c3e3"
+    },
+    {
+      "id": "death_2",
+      "action": "death",
+      "order": 2,
+      "file": "frames/death_2.png",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "7595ef6be3d6cdf0756026b286ce0a5f21ba1876dd2a930ac6a3368ce15d68c4"
+    },
+    {
+      "id": "death_3",
+      "action": "death",
+      "order": 3,
+      "file": "frames/death_3.png",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "9bad554f36bb397e190f9504fb06ff70088ed204365907301665944224acaa6a"
+    },
+    {
+      "id": "death_4",
+      "action": "death",
+      "order": 4,
+      "file": "frames/death_4.png",
+      "rect": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "367f6add2cefb0cfb12e0eb805921984e59437998391ac95cc43a0364648a6d9"
+    },
+    {
+      "id": "death_5",
+      "action": "death",
+      "order": 5,
+      "file": "frames/death_5.png",
+      "rect": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "a0729436146039ba5f0994e1195d6fb8a76c9781fe884cb03cfd4ccbd7b9de73"
+    }
+  ]
+}

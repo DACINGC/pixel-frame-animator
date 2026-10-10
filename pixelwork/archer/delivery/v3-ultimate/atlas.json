@@ -1,0 +1,115 @@
+{
+  "title": "原创像素弓箭手·云纹游侠 —— 大招动画 8 帧",
+  "size": [
+    512,
+    64
+  ],
+  "frame_size": 64,
+  "palette_size": 16,
+  "frames": [
+    {
+      "id": "ult_0",
+      "action": "ult",
+      "order": 0,
+      "file": "frames/ult_0.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "c71aa29c7983d7b9b0179f7b812cea55e90ebc57803417d2b1fb7f468444e0b6"
+    },
+    {
+      "id": "ult_1",
+      "action": "ult",
+      "order": 1,
+      "file": "frames/ult_1.png",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "51301ac992108b0c6861ac06899d86ba0d8dfa1a30d6fc6768dcdf900a623e67"
+    },
+    {
+      "id": "ult_2",
+      "action": "ult",
+      "order": 2,
+      "file": "frames/ult_2.png",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "dcda9071742e68f3b982b1f94225c458f7913016c16922db7809c712ee6793a7"
+    },
+    {
+      "id": "ult_3",
+      "action": "ult",
+      "order": 3,
+      "file": "frames/ult_3.png",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "578a616a30de11e2f77322135814b85da32c290fe5662aef2a2e06549692daa3"
+    },
+    {
+      "id": "ult_4",
+      "action": "ult",
+      "order": 4,
+      "file": "frames/ult_4.png",
+      "rect": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "63c759be139d3ca3c94e314ccc4e1b02c45c8ae9feb4079bb67ab92c241b15d6"
+    },
+    {
+      "id": "ult_5",
+      "action": "ult",
+      "order": 5,
+      "file": "frames/ult_5.png",
+      "rect": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "aa4ec292951aed08833ee87d03587657a20acac613633abc411419d2b068b6d8"
+    },
+    {
+      "id": "ult_6",
+      "action": "ult",
+      "order": 6,
+      "file": "frames/ult_6.png",
+      "rect": [
+        384,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "f34555badc6e43ace4dacd351035ce83d7b62a49f2c78277677325f3b381b9a6"
+    },
+    {
+      "id": "ult_7",
+      "action": "ult",
+      "order": 7,
+      "file": "frames/ult_7.png",
+      "rect": [
+        448,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "5e1f76865fff1ecb5681a3e5c550a309983692e229bec2a3c1bf99772a805c79"
+    }
+  ]
+}

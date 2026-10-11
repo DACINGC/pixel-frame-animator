@@ -168,8 +168,48 @@ function nodeEl(node) {
     wrap.appendChild(block);
   }
 
-  for (const s of node.sets) wrap.appendChild(leafEl(s));
+  for (const s of node.sets) {
+    wrap.appendChild(leafEl(s));
+    if (s.clips.length > 1) wrap.appendChild(clipGroupEl(s));
+  }
   return wrap;
+}
+
+/* 一个动画集含多个动作时，列出可单独预览的子条目 */
+function clipGroupEl(s) {
+  const box = document.createElement('div');
+  box.className = 'tree-children clip-group';
+  for (const c of s.clips) {
+    const row = document.createElement('div');
+    row.className = 'tree-row clip';
+    row.dataset.id = s.id;
+    row.dataset.clip = c.name;
+    const dot = document.createElement('span');
+    dot.className = 'clip-dot';
+    const name = document.createElement('span');
+    name.textContent = c.name;
+    name.title = `${s.dir} · 只播放「${c.name}」`;
+    const n = document.createElement('span');
+    n.className = 'tree-count';
+    n.textContent = c.frames.length;
+    row.append(dot, name, n);
+    row.addEventListener('click', () => selectSet(s.id, c.name));
+    box.appendChild(row);
+  }
+  return box;
+}
+
+/* 同步侧栏高亮：动画集 + 当前动作 */
+function syncTreeSelection() {
+  const id = state.set ? state.set.id : null;
+  document.querySelectorAll('.tree-row.leaf').forEach(el => {
+    el.classList.toggle('selected', el.dataset.id === id);
+  });
+  document.querySelectorAll('.tree-row.clip').forEach(el => {
+    const on = el.dataset.id === id && el.dataset.clip === state.clip;
+    el.classList.toggle('selected', on);
+    el.classList.toggle('dim-row', el.dataset.id === id && !on);
+  });
 }
 
 function leafEl(s) {
@@ -236,11 +276,12 @@ function tagEl(text, title) {
 
 /* ---------------- 选择动画集 ---------------- */
 
-function selectSet(id) {
+function selectSet(id, clipName) {
   const set = state.data.sets.find(s => s.id === id);
   if (!set) return;
   state.set = set;
-  state.clip = ALL;
+  // 默认只播第一个动作，避免 attack 和 hit 这类不同动作被串在一起连播
+  state.clip = clipName || (set.clips.length > 1 ? set.clips[0].name : ALL);
   state.idx = 0;
   state.dir = 1;
   state.playing = false;
@@ -256,10 +297,7 @@ function selectSet(id) {
   $('empty').hidden = true;
   $('workspace').hidden = false;
 
-  document.querySelectorAll('.tree-row.leaf').forEach(el => {
-    el.classList.toggle('selected', el.dataset.id === id);
-  });
-
+  syncTreeSelection();
   applyClip();
   renderMeta();
   renderSheet();
@@ -282,14 +320,16 @@ function renderMeta() {
 
   const box = $('clips');
   box.innerHTML = '';
-  const mk = (name, n, active) => {
+  // label 只是显示文案，name 才是存进 state.clip 的值（全部连播必须用内部常量 ALL）
+  const mk = (name, n, active, label) => {
     const b = document.createElement('button');
     b.className = 'clip-chip' + (active ? ' active' : '');
-    b.innerHTML = `<b>${name}</b> ${n}`;
+    b.innerHTML = `<b>${label || name}</b> ${n}`;
     b.addEventListener('click', () => { state.clip = name; applyClip(); });
     return b;
   };
-  box.appendChild(mk('全部', s.frameCount, state.clip === ALL));
+  box.appendChild(mk(ALL, s.frameCount, state.clip === ALL,
+    s.clips.length > 1 ? '全部连播' : '全部'));
   for (const c of s.clips) box.appendChild(mk(c.name, c.frames.length, state.clip === c.name));
 }
 
@@ -302,6 +342,7 @@ function applyClip() {
   if (state.idx >= state.viewList.length) state.idx = 0;
   $('frameRange').max = String(Math.max(0, state.viewList.length - 1));
   $('frameRange').value = String(state.idx);
+  syncTreeSelection();
   renderFilmstrip();
   renderGrid();
   updatePlayBtn();
@@ -453,8 +494,16 @@ function renderFilmstrip() {
   box.innerHTML = '';
   state.viewList.forEach((fi, pos) => {
     const fr = state.set.frames[fi];
+    const prev = pos > 0 ? state.set.frames[state.viewList[pos - 1]] : null;
+    const boundary = state.clip === ALL && prev && prev.clip !== fr.clip;
     const cell = document.createElement('div');
-    cell.className = 'film-cell' + (pos === state.idx ? ' active' : '');
+    cell.className = 'film-cell' + (pos === state.idx ? ' active' : '') + (boundary ? ' clip-start' : '');
+    if (boundary) {
+      const tag = document.createElement('span');
+      tag.className = 'clip-tag';
+      tag.textContent = fr.clip;
+      cell.appendChild(tag);
+    }
     const img = document.createElement('img');
     img.src = fileUrl(fr.file);
     img.loading = 'lazy';

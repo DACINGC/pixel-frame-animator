@@ -25,6 +25,14 @@ python frame_anim_template.py 你的输出目录    # 指定输出目录（必�
 输出目录内容：`frames/*.png`（逐帧）、`sprite-sheet.png`、`contact-sheet-8x.png`（8 倍放大目检用）、
 `atlas.json`（帧序与坐标）、`palette.json`、`manifest.sha256`。
 
+__`manifest.sha256` 记的是 PNG 文件的字节哈希__，因此可以直接用系统工具复核：
+
+```bash
+cd 输出目录 && sha256sum -c manifest.sha256
+```
+
+`atlas.json` 里每帧的 `rgba_sha256` 是**内存 RGBA 哈希**，只用于帧间去重，不要拿它跟 PNG 文件比对。
+
 ## 姿态参数约定（改动作只改参数，不动造型代码）
 
 | 参数 | 含义 |

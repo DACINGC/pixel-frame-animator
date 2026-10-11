@@ -21,8 +21,8 @@ from PIL import Image, ImageDraw
 
 # ---------------- 1. 配置 ----------------
 SIZE = 64
-# 输出目录：命令行第一个参数可指定，默认脚本同目录下 demo-output
-OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).parent / 'demo-output'
+# 输出目录：命令行第一个参数可指定，默认当前工作目录下的 demo-output
+OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path.cwd() / 'demo-output'
 
 PALETTE = [                                           # 索引 -> RGBA
     (0, 0, 0, 0),        # 0 透明
@@ -196,8 +196,14 @@ def export():
         raise SystemExit(f'姿态重复，必须让每帧有真实差异：{dup}')
     if not any(Path(OUT / f['file']).stat().st_size for f in frames):
         raise SystemExit('所有帧都是空白，角色未绘制')
-    manifest = '\n'.join(f'{f["rgba_sha256"]}  {f["file"]}' for f in frames)
-    (OUT / 'manifest.sha256').write_text(manifest, encoding='utf-8')
+    # manifest 校验的是 PNG 文件本身的字节，这样 sha256sum -c manifest.sha256 可直接复核；
+    # atlas.json 里的 rgba_sha256 才是内存 RGBA 哈希，仅用于帧去重
+    lines = []
+    for f in frames:
+        sha = hashlib.sha256((OUT / f['file']).read_bytes()).hexdigest()
+        lines.append(f'{sha}  {f["file"]}')
+    with open(OUT / 'manifest.sha256', 'w', encoding='utf-8', newline='\n') as fh:
+        fh.write('\n'.join(lines) + '\n')
     print(f'OK -> {OUT}  帧数={len(imgs)}  画布={SIZE}  颜色数={len(PALETTE)}  帧间差异校验=PASS')
     print('下一步：真实打开 contact-sheet-8x.png 目检轮廓/姿态差异/部位一致/不截断')
 

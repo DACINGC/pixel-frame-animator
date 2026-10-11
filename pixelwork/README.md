@@ -40,6 +40,23 @@ pixelwork/
 | `archer/delivery/v3-death` | `826273cc677eb7aef9f5c6a5555212a61a1266ed18d5f951049b90d9a80ab29b` |
 | `archer/delivery/v3-ultimate` | `dc85525049c7dc5248ea655099bc1031b20ebf4d26bcd392ad084ebaeb6a84dd` |
 
+上表的 SHA256 是 `manifest.sha256` **文件本身**的哈希（包外留存，用于事后确认包没被改动）。
+**这些包保持原样、不重新导出** —— 一旦重 `build`，上表登记值就失效了。
+
+### 历史包的 manifest 有个已知坑
+
+`v3-death`、`v3-ultimate`、`demo` 由旧导出逻辑生成，它们的 `manifest.sha256` 记的是
+**内存 RGBA 哈希**（而不是 PNG 文件哈希），且行尾是 CRLF。因此：
+
+```bash
+sha256sum -c manifest.sha256     # 在这几个包里会全部 FAILED，这是格式问题，不是文件损坏
+```
+
+复核这些旧包请用 `atlas.json` 中每帧的 `rgba_sha256`，比对 `frames/*.png` 解码后的 RGBA 字节。
+
+`gen_extra.py` 与 `template/frame_anim_template.py` 已修正为「PNG 文件哈希 + LF 行尾」，
+**之后新出的包**可以直接 `sha256sum -c` 复核；旧包不追溯修改。
+
 ## 快速上手
 
 - 想**预览/检查这些动画** → 运行 `viewer/start.bat`（或 `python viewer/serve.py`），浏览器自动打开

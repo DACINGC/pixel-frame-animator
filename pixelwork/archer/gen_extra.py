@@ -462,8 +462,14 @@ def export(out_dir, frames, title):
     if len(set(hs)) != len(hs):
         dup = [m['id'] for m in meta if hs.count(m['rgba_sha256']) > 1]
         raise SystemExit('姿态重复，每帧必须有真实差异：%s' % dup)
-    (OUT / 'manifest.sha256').write_text(
-        '\n'.join('%s  %s' % (m['rgba_sha256'], m['file']) for m in meta), encoding='utf-8')
+    # manifest 校验 PNG 文件本身的字节 + 强制 LF 行尾，
+    # 这样 sha256sum -c manifest.sha256 可直接复核（Windows 下 write_text 会转成 CRLF 导致校验失败）
+    lines = []
+    for m in meta:
+        sha = hashlib.sha256((OUT / m['file']).read_bytes()).hexdigest()
+        lines.append('%s  %s' % (sha, m['file']))
+    with open(OUT / 'manifest.sha256', 'w', encoding='utf-8', newline='\n') as fh:
+        fh.write('\n'.join(lines) + '\n')
     _write_project_json(OUT, frames, title)
     print('OK -> %s  帧数=%d  画布=%d  颜色数=%d  帧间差异校验=PASS' % (OUT, n, SIZE, len(PALETTE)))
     for m in meta:

@@ -16,8 +16,12 @@
 
 ## 2. 用 py 脚本能直接做图吗？能
 
-只需要 **Pillow**（本仓库用 12.3.0，在隔离 venv：
-`C:\Users\PC-7020\.workbuddy\binaries\python\envs\default\Scripts\python.exe`）。
+只需要 **Pillow**（本仓库用 12.3.0）。装在项目隔离环境里，不要装进系统 Python：
+
+```bash
+python -m venv .venv && .venv/Scripts/python.exe -m pip install pillow   # Windows
+python -m venv .venv && .venv/bin/python      -m pip install pillow      # macOS / Linux
+```
 
 最小示例：
 

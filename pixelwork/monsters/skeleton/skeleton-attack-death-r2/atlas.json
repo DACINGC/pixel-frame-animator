@@ -1,0 +1,126 @@
+{
+  "size": [
+    256,
+    32
+  ],
+  "frame_size": 32,
+  "palette_size": 16,
+  "layer_order": [
+    "back",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "pack": "combat",
+  "anchors": {
+    "TOP_Y": 5,
+    "WAIST_Y": 19,
+    "FOOT_Y": 27
+  },
+  "frames": [
+    {
+      "id": "attack_0",
+      "action": "attack",
+      "order": 0,
+      "file": "frames/attack_0.png",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "cd9e4c6b45b7b86221306126a5776f0b376bd834543a47209e4327a2927d0091"
+    },
+    {
+      "id": "attack_1",
+      "action": "attack",
+      "order": 1,
+      "file": "frames/attack_1.png",
+      "rect": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "9392f73f17941c68fe173acd6a2918e65dd92b721aebcfff3fdd3ded93e13497"
+    },
+    {
+      "id": "attack_2",
+      "action": "attack",
+      "order": 2,
+      "file": "frames/attack_2.png",
+      "rect": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "d272a64033cc30afc80070688ec69130368c854b6c70f47b7a2748088597a494"
+    },
+    {
+      "id": "attack_3",
+      "action": "attack",
+      "order": 3,
+      "file": "frames/attack_3.png",
+      "rect": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "ea410409d881322cfc45f46eb0a936df13e70d1ad772ea14df1af65dd338c391"
+    },
+    {
+      "id": "death_0",
+      "action": "death",
+      "order": 4,
+      "file": "frames/death_0.png",
+      "rect": [
+        128,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "c1fce00410ef373bbdb0348b08c6973a57dc8c2b1243095bfe5d3a83dbe8b9c9"
+    },
+    {
+      "id": "death_1",
+      "action": "death",
+      "order": 5,
+      "file": "frames/death_1.png",
+      "rect": [
+        160,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "fb9979f05296affdfc2ed17fd7063d19fed1878ceb880e40738ec43c08c62aa1"
+    },
+    {
+      "id": "death_2",
+      "action": "death",
+      "order": 6,
+      "file": "frames/death_2.png",
+      "rect": [
+        192,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "b07698aa4e84717e8893c4f24f40b4f2ff90a4065b84054db0064ca090e21e4b"
+    },
+    {
+      "id": "death_3",
+      "action": "death",
+      "order": 7,
+      "file": "frames/death_3.png",
+      "rect": [
+        224,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "c59b643c9f4de53b6a42b9d9126ff657299f83dbf724fbea4f7a537e72922c8f"
+    }
+  ]
+}

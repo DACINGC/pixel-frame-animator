@@ -1,0 +1,99 @@
+{
+  "size": [
+    192,
+    32
+  ],
+  "frame_size": 32,
+  "palette_size": 15,
+  "layer_order": [
+    "back",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "pack": "locomotion",
+  "actions": [
+    "move",
+    "hit"
+  ],
+  "frames": [
+    {
+      "id": "move_0",
+      "action": "move",
+      "order": 0,
+      "file": "frames/move_0.png",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "24ebebc5816dea4a8fb54a62a2822ef97cd9bfe0d4bb230ff400baaa56e633b4"
+    },
+    {
+      "id": "move_1",
+      "action": "move",
+      "order": 1,
+      "file": "frames/move_1.png",
+      "rect": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "3efa5a46b9f1060c5e72b195378a5c2d0caea2c047aaa63be5f31c93c493cea1"
+    },
+    {
+      "id": "move_2",
+      "action": "move",
+      "order": 2,
+      "file": "frames/move_2.png",
+      "rect": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "d6b4a3368fb223a9a771f7ca73b4964e2b7788991a31c6c80881fcb54f15cec4"
+    },
+    {
+      "id": "move_3",
+      "action": "move",
+      "order": 3,
+      "file": "frames/move_3.png",
+      "rect": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "3dedc1b44b4a9a14421b16e24e1c7e7cb7d5ceaf72cd2a41926f60523d9dded4"
+    },
+    {
+      "id": "hit_0",
+      "action": "hit",
+      "order": 4,
+      "file": "frames/hit_0.png",
+      "rect": [
+        128,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "8c067ddd1ffc5d32337c2bd5dc9da482649e72038121d4365b1c54f32f452b52"
+    },
+    {
+      "id": "hit_1",
+      "action": "hit",
+      "order": 5,
+      "file": "frames/hit_1.png",
+      "rect": [
+        160,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "c6842745f520c932cd895a197cd410a978f8323db4d20048207ed7c3effe3d67"
+    }
+  ]
+}

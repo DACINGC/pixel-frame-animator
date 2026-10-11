@@ -1,0 +1,103 @@
+{
+  "size": [
+    192,
+    32
+  ],
+  "frame_size": 32,
+  "palette_size": 16,
+  "layer_order": [
+    "back",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "anchors": {
+    "CAP_CX": 16,
+    "TOP_Y": 8,
+    "FOOT_Y": 27,
+    "CAP_H": 8,
+    "CAP_HW": 9,
+    "STEM_H": 8,
+    "STEM_HW": 4
+  },
+  "frames": [
+    {
+      "id": "move_0",
+      "action": "move",
+      "order": 0,
+      "file": "frames/move_0.png",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "6e08baf5ec6fe0a6edcc899b2f665932427788f6e4f7b75e8c3e85cc24a03aa7"
+    },
+    {
+      "id": "move_1",
+      "action": "move",
+      "order": 1,
+      "file": "frames/move_1.png",
+      "rect": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "060b054ee84378fc134b4660ef638d2a316f8c08a36c65fb1b5ff8df7b6f7205"
+    },
+    {
+      "id": "move_2",
+      "action": "move",
+      "order": 2,
+      "file": "frames/move_2.png",
+      "rect": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "b997150f63eea9feea3e655a239deb3eab7b86530766f0f31f519e52282d30a0"
+    },
+    {
+      "id": "move_3",
+      "action": "move",
+      "order": 3,
+      "file": "frames/move_3.png",
+      "rect": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "d4cb3872a912123f9223d0baa0c6bd5e7ec5e845fdef52a917d1c004ebcc933f"
+    },
+    {
+      "id": "hit_0",
+      "action": "hit",
+      "order": 4,
+      "file": "frames/hit_0.png",
+      "rect": [
+        128,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "732e0e887ba58475ff5f2147bbf6baf44d16258b7d50704e3d88b26129153fad"
+    },
+    {
+      "id": "hit_1",
+      "action": "hit",
+      "order": 5,
+      "file": "frames/hit_1.png",
+      "rect": [
+        160,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "c59b58676e89a1ac81cfae2ecbae72b7c6a630814b3e61914c335e03e6f33f88"
+    }
+  ]
+}

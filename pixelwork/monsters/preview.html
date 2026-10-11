@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>怪物帧动画预览 — slime / bat / skeleton / shroom</title>
+<style>
+  :root { color-scheme: dark; }
+  body { background:#14141c; color:#d8d8e4; font-family: "Microsoft YaHei", system-ui, sans-serif; margin:24px; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  .sub { color:#8a8aa0; font-size:13px; margin-bottom:20px; }
+  .monster { background:#1c1c28; border:1px solid #34344a; border-radius:10px; padding:14px 16px; margin-bottom:18px; }
+  .monster h2 { font-size:15px; margin:0 0 10px; display:flex; align-items:center; gap:10px; }
+  .swatch { width:18px; height:18px; border-radius:4px; border:1px solid #000; display:inline-block; }
+  .row { display:flex; flex-wrap:wrap; gap:14px; }
+  .cell { text-align:center; }
+  .cell canvas { width:160px; height:160px; image-rendering:pixelated; background:
+    repeating-conic-gradient(#20202e 0% 25%, #191924 0% 50%) 0 0/20px 20px;
+    border:1px solid #34344a; border-radius:8px; }
+  .cell .tag { font-size:12px; color:#9a9ab2; margin-top:4px; }
+  .fps { font-size:12px; color:#8a8aa0; margin-top:10px; }
+  input[type=range] { vertical-align:middle; }
+</style>
+</head>
+<body>
+<h1>怪物帧动画预览</h1>
+<div class="sub">4 个怪物 × 4 动作（move / hit / attack / death），32×32 逐帧程序化绘制 · 面朝左 · 放大一律 NEAREST</div>
+
+<div class="fps">
+  播放速度：<input id="fps" type="range" min="2" max="16" value="8" step="1">
+  <span id="fpsv">8</span> fps（death / hit 建议放慢看细节）
+</div>
+
+<div id="root"></div>
+
+<script>
+const MONSTERS = [
+  { name:"史莱姆 Slime",    color:"#4fae5c", dir:"slime",    packs:{move:"slime-move-hit-r4",      hit:"slime-move-hit-r4",      attack:"slime-attack-death-r4", death:"slime-attack-death-r4"} },
+  { name:"洞穴蝙蝠 Bat",    color:"#7a5cb8", dir:"bat",      packs:{move:"bat-move-hit",           hit:"bat-move-hit",           attack:"bat-attack-death",      death:"bat-attack-death"} },
+  { name:"骷髅小兵 Skeleton",color:"#e8e3d0", dir:"skeleton", packs:{move:"skeleton-move-hit-r2",   hit:"skeleton-move-hit-r2",   attack:"skeleton-attack-death-r2", death:"skeleton-attack-death-r2"} },
+  { name:"毒蘑菇怪 Shroom", color:"#c8453c", dir:"shroom",   packs:{move:"shroom-move-hit",        hit:"shroom-move-hit",        attack:"shroom-attack-death",   death:"shroom-attack-death"} },
+];
+const ACTIONS = [
+  { id:"move",   label:"移动 move",   frames:4 },
+  { id:"hit",    label:"受击闪烁 hit", frames:2 },
+  { id:"attack", label:"攻击 attack", frames:4 },
+  { id:"death",  label:"死亡 death",  frames:4 },
+];
+let FPS = 8;
+const players = [];
+
+MONSTERS.forEach(m => {
+  const box = document.createElement("div"); box.className = "monster";
+  box.innerHTML = `<h2><span class="swatch" style="background:${m.color}"></span>${m.name}</h2>`;
+  const row = document.createElement("div"); row.className = "row";
+  ACTIONS.forEach(a => {
+    const cell = document.createElement("div"); cell.className = "cell";
+    const cv = document.createElement("canvas"); cv.width = 32; cv.height = 32;
+    const tag = document.createElement("div"); tag.className = "tag"; tag.textContent = a.label;
+    cell.append(cv, tag); row.append(cell);
+    const imgs = [];
+    for (let i = 0; i < a.frames; i++)
+      imgs.push(`${m.dir}/${m.packs[a.id]}/frames/${a.id}_${i}.png`);
+    players.push({ cv, imgs, t: 0 });
+  });
+  box.append(row); document.getElementById("root").append(box);
+});
+
+const fpsEl = document.getElementById("fps");
+fpsEl.addEventListener("input", () => {
+  FPS = +fpsEl.value; document.getElementById("fpsv").textContent = FPS;
+});
+
+const cache = new Map();
+function load(src, cb) {
+  let im = cache.get(src);
+  if (!im) { im = new Image(); im.src = src; cache.set(src, im); }
+  if (im.complete) cb(im); else im.onload = () => cb(im);
+}
+setInterval(() => {
+  players.forEach(p => {
+    p.t++;
+    const idx = Math.floor(p.t * FPS / 60) % p.imgs.length;
+    load(p.imgs[idx], im => {
+      const ctx = p.cv.getContext("2d");
+      ctx.clearRect(0, 0, 32, 32);
+      ctx.drawImage(im, 0, 0);
+    });
+  });
+}, 1000 / 60);
+</script>
+</body>
+</html>

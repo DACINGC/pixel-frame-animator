@@ -1,0 +1,120 @@
+{
+  "size": [
+    256,
+    32
+  ],
+  "frame_size": 32,
+  "palette_size": 14,
+  "layer_order": [
+    "back",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "frames": [
+    {
+      "id": "impact_0",
+      "action": "impact",
+      "order": 0,
+      "file": "frames/impact_0.png",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "24b727c6b7a1f85f069dfc91074fed08babf08dd919b662935c0ff8c2d8fb812"
+    },
+    {
+      "id": "impact_1",
+      "action": "impact",
+      "order": 1,
+      "file": "frames/impact_1.png",
+      "rect": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "b7f3281fd10aa52a66d2a0e49d4bb3be0d374ebe6c93e086e579001655c24ac8"
+    },
+    {
+      "id": "impact_2",
+      "action": "impact",
+      "order": 2,
+      "file": "frames/impact_2.png",
+      "rect": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "1b49147b2049de0a17db86bb7984986fd3b947dcf9ca17e0f80c69ed5d1da948"
+    },
+    {
+      "id": "impact_3",
+      "action": "impact",
+      "order": 3,
+      "file": "frames/impact_3.png",
+      "rect": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "5bd7cb469a4e9645cc747df8e401fa630c121916aa9e1cfbe23d305aabae3106"
+    },
+    {
+      "id": "slash_0",
+      "action": "slash",
+      "order": 4,
+      "file": "frames/slash_0.png",
+      "rect": [
+        128,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "9e9e748e8c12ad6aa88de7d61939e88c466bb1ae799a0c6fb361473fc85cbba9"
+    },
+    {
+      "id": "slash_1",
+      "action": "slash",
+      "order": 5,
+      "file": "frames/slash_1.png",
+      "rect": [
+        160,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "06a4a5ef53a83fa76c6a0b5de5a5187173e26f3b50a2e7f43e0ae0d1581957bd"
+    },
+    {
+      "id": "slash_2",
+      "action": "slash",
+      "order": 6,
+      "file": "frames/slash_2.png",
+      "rect": [
+        192,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "38d442a4d0655f53cac5221a351ec343cfdcfe9600f4fcb790ae93e608f9704d"
+    },
+    {
+      "id": "slash_3",
+      "action": "slash",
+      "order": 7,
+      "file": "frames/slash_3.png",
+      "rect": [
+        224,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "28f9115d59f758057d1a7e8a941ab3c770c9260e287c2f50d88b74a2f066599c"
+    }
+  ]
+}

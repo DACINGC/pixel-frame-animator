@@ -1,0 +1,94 @@
+{
+  "size": [
+    192,
+    32
+  ],
+  "frame_size": 32,
+  "palette_size": 12,
+  "layer_order": [
+    "back",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "frames": [
+    {
+      "id": "explode_0",
+      "action": "explode",
+      "order": 0,
+      "file": "frames/explode_0.png",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "237b5b3577fdcddd0ccc2c2e8ac0abc282133b29ef81f431eb1d6852db0443ee"
+    },
+    {
+      "id": "explode_1",
+      "action": "explode",
+      "order": 1,
+      "file": "frames/explode_1.png",
+      "rect": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "7862fd8667edc153525b21e162b501e92917e301893e12ee9c99e2a5c9856943"
+    },
+    {
+      "id": "explode_2",
+      "action": "explode",
+      "order": 2,
+      "file": "frames/explode_2.png",
+      "rect": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "e0ee02c818fad06a31ddaf89011f7ee9d207af87c1869cbc5cd938028890f6bb"
+    },
+    {
+      "id": "explode_3",
+      "action": "explode",
+      "order": 3,
+      "file": "frames/explode_3.png",
+      "rect": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "e8b2a9892d217de2e40acfaf3dc164368ce43f6265d3a8f873c2b131e2f48574"
+    },
+    {
+      "id": "explode_4",
+      "action": "explode",
+      "order": 4,
+      "file": "frames/explode_4.png",
+      "rect": [
+        128,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "921d00502909b27270b94dbd9e74068d28477965ddd4f94a58610530f7baa633"
+    },
+    {
+      "id": "explode_5",
+      "action": "explode",
+      "order": 5,
+      "file": "frames/explode_5.png",
+      "rect": [
+        160,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "673462f8dfe632b4d6958f755a9854ad74e8b3069e009a7f3f0fe50c2d63dd4a"
+    }
+  ]
+}

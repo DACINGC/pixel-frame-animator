@@ -1,0 +1,120 @@
+{
+  "size": [
+    256,
+    32
+  ],
+  "frame_size": 32,
+  "palette_size": 11,
+  "layer_order": [
+    "back",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "frames": [
+    {
+      "id": "charge_0",
+      "action": "charge",
+      "order": 0,
+      "file": "frames/charge_0.png",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "85cde76ca64c436d50bb4da1c3e438c17c962d8ccf16bb654ec481006e3db274"
+    },
+    {
+      "id": "charge_1",
+      "action": "charge",
+      "order": 1,
+      "file": "frames/charge_1.png",
+      "rect": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "c54d06fc67d95c2f2b7ef38399ef2919948ac99e8ab89ef5ec0afa4072ae0d70"
+    },
+    {
+      "id": "charge_2",
+      "action": "charge",
+      "order": 2,
+      "file": "frames/charge_2.png",
+      "rect": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "55cf1ff02c5d93e1a5e30458a15219790ef9b5f656203a539d44615c6aa22c3e"
+    },
+    {
+      "id": "charge_3",
+      "action": "charge",
+      "order": 3,
+      "file": "frames/charge_3.png",
+      "rect": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "580078ea79ad1db14a49bb24a339995aeb0783be36636c7c74ac47ce3624e0ab"
+    },
+    {
+      "id": "burst_0",
+      "action": "burst",
+      "order": 4,
+      "file": "frames/burst_0.png",
+      "rect": [
+        128,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "16326f4d2decb2a177b4c5d5c510162f59c7166fd451385d1496d4ff98c96f07"
+    },
+    {
+      "id": "burst_1",
+      "action": "burst",
+      "order": 5,
+      "file": "frames/burst_1.png",
+      "rect": [
+        160,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "65d4370d6f5a864d702443ffbf8f744827d3d4ca90441188919214c2239ba299"
+    },
+    {
+      "id": "burst_2",
+      "action": "burst",
+      "order": 6,
+      "file": "frames/burst_2.png",
+      "rect": [
+        192,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "1f968de5facbe43bad630bde2477c80f1274554bcce646695ba2a7ac7928230f"
+    },
+    {
+      "id": "burst_3",
+      "action": "burst",
+      "order": 7,
+      "file": "frames/burst_3.png",
+      "rect": [
+        224,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "daad4987f1772708c5f36ae518014493368069f319a0fe9906ad336c17e317a9"
+    }
+  ]
+}

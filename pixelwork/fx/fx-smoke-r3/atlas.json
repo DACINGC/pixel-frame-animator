@@ -1,0 +1,95 @@
+{
+  "size": [
+    192,
+    32
+  ],
+  "frame_size": 32,
+  "palette_size": 12,
+  "layer_order": [
+    "back",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "pack": "smoke",
+  "frames": [
+    {
+      "id": "smoke_0",
+      "action": "smoke",
+      "order": 0,
+      "file": "frames/smoke_0.png",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "291626d8c87b2af342d200b1d04c9791e85e40e8efe951126f78325d9fabf2da"
+    },
+    {
+      "id": "smoke_1",
+      "action": "smoke",
+      "order": 1,
+      "file": "frames/smoke_1.png",
+      "rect": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "6d1e872ce8a27bd9cc52753f7f8df4af53eca970d507227e156f1a430685cf3f"
+    },
+    {
+      "id": "smoke_2",
+      "action": "smoke",
+      "order": 2,
+      "file": "frames/smoke_2.png",
+      "rect": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "1fd3b9837e83f74bf08ea232b7f6b35fd47dc17100062511b98e02d22f600de7"
+    },
+    {
+      "id": "smoke_3",
+      "action": "smoke",
+      "order": 3,
+      "file": "frames/smoke_3.png",
+      "rect": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "a13b5288f1668da4f1dba56abd90bb9eb2173e660761d33045cb1b41283f34dd"
+    },
+    {
+      "id": "smoke_4",
+      "action": "smoke",
+      "order": 4,
+      "file": "frames/smoke_4.png",
+      "rect": [
+        128,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "6af0008006b67244b302b8a4a95126f731730bdbe6de7c5fcbdab7a5417110f2"
+    },
+    {
+      "id": "smoke_5",
+      "action": "smoke",
+      "order": 5,
+      "file": "frames/smoke_5.png",
+      "rect": [
+        160,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "2e9d488c095a35b366fec79f7ab1c6326d187a8695016f19765ab1594ef94a90"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "size": [
+    128,
+    32
+  ],
+  "frame_size": 32,
+  "palette_size": 12,
+  "layer_order": [
+    "back",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "pack": "dust",
+  "frames": [
+    {
+      "id": "dust_0",
+      "action": "dust",
+      "order": 0,
+      "file": "frames/dust_0.png",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "53eb51c4de1fa1f207d121627de5b4bddad980168977f34456b0d21911c970ca"
+    },
+    {
+      "id": "dust_1",
+      "action": "dust",
+      "order": 1,
+      "file": "frames/dust_1.png",
+      "rect": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "d425dbec69d2f5ae55908e3c0c025fb160b7d3830c2154e0c75a2430a14a3175"
+    },
+    {
+      "id": "dust_2",
+      "action": "dust",
+      "order": 2,
+      "file": "frames/dust_2.png",
+      "rect": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "0550c0432a709e67c950b50ffb0fe1c28942a292bc69890a21054862017970a4"
+    },
+    {
+      "id": "dust_3",
+      "action": "dust",
+      "order": 3,
+      "file": "frames/dust_3.png",
+      "rect": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "a78226cf60360944881fdb8d1ab1d64176e7551d7e43f9d266a2024e3c6af25e"
+    }
+  ]
+}

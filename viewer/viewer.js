@@ -25,6 +25,9 @@ const state = {
   imgs: [],
   sheetImg: null,
   hideArchive: true,
+  hideDupes: true,      // 内容重复的只留一个
+  hideOld: true,        // -rN 迭代版本只留最新
+  expanded: new Set(),  // 被点开「+N」的代表项 id
   query: '',
 };
 
@@ -38,9 +41,10 @@ function fileUrl(rel) {
   return '../' + rel;   // file:// 兜底：index.html 位于 <root>/viewer/
 }
 
-async function loadData() {
+async function loadData(opts = {}) {
+  const wantArchive = !state.hideArchive;
   try {
-    const res = await fetch('/api/scan', { cache: 'no-store' });
+    const res = await fetch(`/api/scan?archive=${wantArchive ? 1 : 0}`, { cache: 'no-store' });
     if (!res.ok) throw new Error('bad status');
     state.data = await res.json();
     state.server = true;
@@ -52,24 +56,52 @@ async function loadData() {
     $('emptyHint').textContent = '没有拿到索引数据，请在 viewer 目录运行：python serve.py';
     return;
   }
-  $('stat').textContent = `${state.data.setCount} 个动画集 · ${state.data.frameCount} 帧 · `
-    + (state.server ? '实时扫描' : '静态索引（运行 serve.py 可实时刷新）');
+  renderStat();
   if (!state.server) $('refreshBtn').title = '离线模式：需重新运行 scan.py --static';
   renderTree();
+  // 保留当前选中项；没有则选第一个可见项
   const wanted = decodeURIComponent((location.hash || '').replace(/^#/, ''));
+  const current = state.set && state.data.sets.some(s => s.id === state.set.id) && !opts.reselect
+    ? state.set.id : null;
   const first = filteredSets()[0];
-  selectSet(wanted && state.data.sets.some(s => s.id === wanted) ? wanted : (first ? first.id : null));
+  selectSet(current || (wanted && state.data.sets.some(s => s.id === wanted) ? wanted : (first ? first.id : null)));
+}
+
+function renderStat() {
+  const d = state.data;
+  const shown = filteredSets().length;
+  $('stat').textContent = `显示 ${shown} / ${d.setCount} 个动画集 · ${d.frameCount} 帧`
+    + (d.dupCount || d.oldCount ? ` · 已折叠重复 ${d.dupCount} / 旧版本 ${d.oldCount}` : '')
+    + ' · ' + (state.server ? '实时扫描' : '静态索引（运行 serve.py 可实时刷新）');
+}
+
+/* 返回该动画集被隐藏的原因，null 表示要显示 */
+function hiddenReason(s) {
+  if (state.hideArchive && /(^|\/)_/.test(s.dir)) return 'archive';
+  if (state.hideDupes && s.isDup && !state.expanded.has(s.dupOf)) return 'dup';
+  if (state.hideOld && s.supersededBy && !state.expanded.has(s.supersededBy)) return 'old';
+  return null;
+}
+
+function matchQuery(s, q) {
+  if (!q) return true;
+  const hay = [s.dir, s.name, s.title || '', s.projectId || '', ...s.clips.map(c => c.name)]
+    .join(' ').toLowerCase();
+  return hay.includes(q);
 }
 
 function filteredSets() {
   const q = state.query.trim().toLowerCase();
-  return (state.data?.sets || []).filter(s => {
-    if (state.hideArchive && /(^|\/)_/.test(s.dir)) return false;
-    if (!q) return true;
-    const hay = [s.dir, s.name, s.title || '', s.projectId || '', ...s.clips.map(c => c.name)]
-      .join(' ').toLowerCase();
-    return hay.includes(q);
-  });
+  return (state.data?.sets || []).filter(s => !hiddenReason(s) && matchQuery(s, q));
+}
+
+/* 某个代表项底下折叠了多少个（重复 + 旧版本） */
+function hiddenFollowers(s) {
+  const all = state.data?.sets || [];
+  return all.filter(x => x !== s && (
+    (state.hideDupes && x.isDup && x.dupOf === s.id) ||
+    (state.hideOld && x.supersededBy === s.id)
+  )).length;
 }
 
 /* ---------------- 侧边栏资源树 ---------------- */
@@ -145,6 +177,7 @@ function leafEl(s) {
   row.className = 'tree-row leaf';
   row.dataset.id = s.id;
   if (state.set && state.set.id === s.id) row.classList.add('selected');
+  if (s.isDup || s.supersededBy) row.classList.add('is-hidden-copy');
 
   const img = document.createElement('img');
   img.className = 'thumb';
@@ -160,13 +193,45 @@ function leafEl(s) {
   meta.className = 'leaf-clips';
   meta.textContent = s.clips.map(c => c.name).join('/');
 
+  const tags = document.createElement('span');
+  tags.className = 'leaf-tags';
+  if (s.isDup) tags.appendChild(tagEl('重复', '内容与其他动画集完全相同'));
+  if (s.supersededBy) tags.appendChild(tagEl('旧版', '存在更新的迭代版本：' + s.supersededBy));
+
   const count = document.createElement('span');
   count.className = 'tree-count';
   count.textContent = s.frameCount;
 
-  row.append(img, name, meta, count);
+  row.append(img, name, meta, tags, count);
+
+  // 「+N」展开被折叠的重复/旧版本
+  const n = hiddenFollowers(s);
+  if (n > 0) {
+    const badge = document.createElement('span');
+    const open = state.expanded.has(s.id);
+    badge.className = 'leaf-badge' + (open ? ' open' : '');
+    badge.textContent = open ? `−${n}` : `+${n}`;
+    badge.title = `展开 ${n} 个被折叠的重复 / 旧版本`;
+    badge.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (state.expanded.has(s.id)) state.expanded.delete(s.id);
+      else state.expanded.add(s.id);
+      renderTree();
+      renderStat();
+    });
+    row.appendChild(badge);
+  }
+
   row.addEventListener('click', () => selectSet(s.id));
   return row;
+}
+
+function tagEl(text, title) {
+  const el = document.createElement('i');
+  el.className = 'tag';
+  el.textContent = text;
+  el.title = title;
+  return el;
 }
 
 /* ---------------- 选择动画集 ---------------- */
@@ -207,8 +272,11 @@ function selectSet(id) {
 function renderMeta() {
   const s = state.set;
   $('setTitle').textContent = s.title || s.name;
-  $('setPath').textContent = `${s.dir}  ·  ${s.frameCount} 帧  ·  ${s.frameSize ? s.frameSize.join('×') : '?'}`
+  let path = `${s.dir}  ·  ${s.frameCount} 帧  ·  ${s.frameSize ? s.frameSize.join('×') : '?'}`
     + (s.projectId ? `  ·  ${s.projectId}` : '') + (s.revision ? ` rev${s.revision}` : '');
+  if (s.isDup) path += `  ·  与「${s.dupOf}」内容相同`;
+  if (s.supersededBy) path += `  ·  已有更新版本：${s.supersededBy}`;
+  $('setPath').textContent = path;
   const desc = $('setDesc');
   if (s.description) { desc.hidden = false; desc.textContent = s.description; } else { desc.hidden = true; }
 
@@ -505,9 +573,20 @@ function switchView(view) {
 
 /* ---------------- 交互绑定 ---------------- */
 
-$('search').addEventListener('input', (e) => { state.query = e.target.value; renderTree(); });
-$('hideArchive').addEventListener('change', (e) => {
-  state.hideArchive = e.target.checked; renderTree();
+$('search').addEventListener('input', (e) => {
+  state.query = e.target.value; renderTree(); renderStat();
+});
+$('hideArchive').addEventListener('change', async (e) => {
+  state.hideArchive = e.target.checked;
+  // 归档目录是服务端跳过扫描的，要显示就得重新请求一次
+  if (state.server) await loadData();
+  else { renderTree(); renderStat(); }
+});
+$('hideDupes').addEventListener('change', (e) => {
+  state.hideDupes = e.target.checked; renderTree(); renderStat();
+});
+$('hideOld').addEventListener('change', (e) => {
+  state.hideOld = e.target.checked; renderTree(); renderStat();
 });
 $('refreshBtn').addEventListener('click', async () => {
   if (!state.server) {

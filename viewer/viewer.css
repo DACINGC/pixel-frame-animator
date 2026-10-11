@@ -122,6 +122,20 @@ main { flex: 1 1 auto; display: flex; min-height: 0; }
 }
 .leaf-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .leaf-clips { color: var(--dim); font-size: 11px; }
+.leaf-tags { display: inline-flex; gap: 4px; }
+.leaf-tags .tag {
+  font-style: normal; font-size: 10px; line-height: 1.5;
+  padding: 0 4px; border-radius: 4px;
+  background: var(--panel-3); color: var(--dim);
+}
+.tree-row.leaf.is-hidden-copy .leaf-name { color: var(--dim); }
+.leaf-badge {
+  margin-left: 4px; padding: 0 5px; border-radius: 4px; cursor: pointer;
+  font-size: 10px; line-height: 1.6; font-variant-numeric: tabular-nums;
+  background: var(--accent-dim); color: var(--text); border: 1px solid var(--line);
+}
+.leaf-badge:hover { background: var(--accent); color: #fff; }
+.leaf-badge.open { background: var(--accent); color: #fff; }
 
 /* ---------- 空状态 ---------- */
 .empty { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--dim); }

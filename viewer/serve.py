@@ -111,6 +111,7 @@ def make_gif(root: str, frames, fps: float, scale: int, bg: str):
 
 class Handler(BaseHTTPRequestHandler):
     root: str = DEFAULT_ROOT
+    include_archive: bool = False
     server_version = "PixelFrameViewer/1.0"
 
     def log_message(self, fmt, *args):  # 精简访问日志
@@ -155,8 +156,10 @@ class Handler(BaseHTTPRequestHandler):
             self.send_file(os.path.join(HERE, path.lstrip("/")))
             return
         if path == "/api/scan":
+            flag = str((qs.get("archive") or [""])[0]).lower()
+            want_archive = self.include_archive or flag in ("1", "true", "yes", "on")
             try:
-                self.send_json(scanner.scan(self.root))
+                self.send_json(scanner.scan(self.root, include_archive=want_archive))
             except Exception as exc:  # noqa: BLE001
                 self.send_json({"error": str(exc)}, 500)
             return
@@ -232,12 +235,25 @@ class Handler(BaseHTTPRequestHandler):
             self.send_json({"error": str(exc)}, 500)
 
 
+def start_server(port: int, max_tries: int = 20) -> ThreadingHTTPServer:
+    """从指定端口开始尝试绑定，被占用就自动换下一个端口。"""
+    last_err: OSError | None = None
+    for p in range(port, port + max_tries):
+        try:
+            return ThreadingHTTPServer(("127.0.0.1", p), Handler)
+        except OSError as exc:  # 端口被占用 / 权限不足
+            last_err = exc
+            log(f"端口 {p} 不可用（{exc.winerror if hasattr(exc, 'winerror') else exc}），尝试下一个…")
+    raise last_err  # type: ignore[misc]
+
+
 def main():
     ap = argparse.ArgumentParser(description="帧动画浏览器本地服务")
     ap.add_argument("root", nargs="?", default=None, help="扫描根目录，默认 viewer 的上一级")
     ap.add_argument("--port", type=int, default=DEFAULT_PORT)
     ap.add_argument("--no-browser", action="store_true", help="不自动打开浏览器")
     ap.add_argument("--scan-only", action="store_true", help="只生成 data.js 然后退出")
+    ap.add_argument("--include-archive", action="store_true", help="连 _archive 等归档目录一起扫描")
     args = ap.parse_args()
 
     try:
@@ -249,17 +265,24 @@ def main():
 
     if args.scan_only:
         sys.argv = [sys.argv[0], root, "--static"]
+        if args.include_archive:
+            sys.argv.append("--include-archive")
         scanner.main()
         return
 
     Handler.root = root
-    data = scanner.scan(root)
+    Handler.include_archive = args.include_archive
+    data = scanner.scan(root, include_archive=args.include_archive)
     log(f"扫描根目录: {root}")
-    log(f"发现 {data['setCount']} 个动画集 / {data['frameCount']} 帧")
+    log(f"发现 {data['setCount']} 个动画集 / {data['frameCount']} 帧"
+        f"（默认显示 {data['visibleCount']} 个：隐藏重复 {data['dupCount']} 个 / 旧版本 {data['oldCount']} 个）")
 
-    url = f"http://127.0.0.1:{args.port}/"
-    server = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
-    log(f"浏览器已就绪: {url}   (Ctrl+C 停止)")
+    server = start_server(args.port)
+    port = server.server_address[1]
+    if port != args.port:
+        log(f"端口 {args.port} 被占用，已自动改用 {port}")
+    url = f"http://127.0.0.1:{port}/"
+    log(f"服务已就绪: {url}   (Ctrl+C 停止)")
 
     if not args.no_browser:
         threading.Timer(0.6, lambda: webbrowser.open(url)).start()

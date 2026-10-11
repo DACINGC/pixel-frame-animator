@@ -766,6 +766,56 @@ function copyText(text) {
   if (navigator.clipboard) navigator.clipboard.writeText(text).catch(() => {});
 }
 
+/* ---------------- 侧栏宽度拖动 ---------------- */
+
+const SIDEBAR_MIN = 150, SIDEBAR_MAX = 560, SIDEBAR_KEY = 'pfa.sidebarWidth';
+
+function setSidebarWidth(px, save) {
+  px = Math.round(Math.max(SIDEBAR_MIN, Math.min(SIDEBAR_MAX, px)));
+  curSidebarPx = px;
+  document.documentElement.style.setProperty('--sidebar-w', px + 'px');
+  if (save) { try { localStorage.setItem(SIDEBAR_KEY, String(px)); } catch (_) {} }
+  draw(); // 预览画布的适配模式依赖内容区宽度
+}
+let curSidebarPx = 270;
+
+function initSidebarResize() {
+  const rz = $('sidebarResizer');
+  const sidebar = $('sidebar');
+  // 恢复上次宽度
+  let saved = 0;
+  try { saved = parseInt(localStorage.getItem(SIDEBAR_KEY) || '', 10) || 0; } catch (_) {}
+  if (saved) setSidebarWidth(saved, false);
+
+  let dragging = false, startX = 0, startW = 0;
+  rz.addEventListener('pointerdown', (e) => {
+    dragging = true;
+    startX = e.clientX;
+    startW = curSidebarPx;
+    rz.setPointerCapture && rz.setPointerCapture(e.pointerId);
+    rz.classList.add('dragging');
+    document.body.classList.add('sidebar-resizing');
+    e.preventDefault();
+  });
+  rz.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    setSidebarWidth(startW + (e.clientX - startX), false);
+  });
+  const end = (e) => {
+    if (!dragging) return;
+    dragging = false;
+    rz.classList.remove('dragging');
+    document.body.classList.remove('sidebar-resizing');
+    try { rz.releasePointerCapture && rz.releasePointerCapture(e.pointerId); } catch (_) {}
+    setSidebarWidth(curSidebarPx, true);
+  };
+  rz.addEventListener('pointerup', end);
+  rz.addEventListener('pointercancel', end);
+  // 双击恢复默认宽度
+  rz.addEventListener('dblclick', () => setSidebarWidth(270, true));
+}
+initSidebarResize();
+
 /* ---------------- 启动 ---------------- */
 
 loadData();

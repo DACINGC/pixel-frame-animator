@@ -88,13 +88,42 @@ body { display: flex; flex-direction: column; }
 main { flex: 1 1 auto; display: flex; min-height: 0; }
 
 .sidebar {
-  width: 270px;
-  flex: 0 0 270px;
+  width: var(--sidebar-w, 270px);
+  flex: 0 0 auto;
+  min-width: 140px;
+  max-width: 560px;
   background: var(--panel);
   border-right: 1px solid var(--line);
   overflow: auto;
   padding: 8px 6px 20px;
 }
+
+.sidebar-resizer {
+  flex: 0 0 5px;
+  margin: 0 -2px;
+  cursor: col-resize;
+  background: transparent;
+  position: relative;
+  z-index: 5;
+  touch-action: none;
+}
+.sidebar-resizer::after {
+  content: '';
+  position: absolute;
+  left: 2px; top: 0; bottom: 0; width: 1px;
+  background: var(--line);
+  transition: background .12s;
+}
+.sidebar-resizer:hover::after,
+.sidebar-resizer.dragging::after {
+  background: var(--accent);
+}
+body.sidebar-resizing {
+  cursor: col-resize;
+  user-select: none;
+}
+body.sidebar-resizing iframe,
+body.sidebar-resizing canvas { pointer-events: none; }
 
 .content { flex: 1 1 auto; min-width: 0; overflow: auto; padding: 14px 16px 24px; }
 

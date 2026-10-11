@@ -1,0 +1,213 @@
+{
+  "title": "金发双马尾女剑士 —— 行走 4 帧 + 奔跑 4 帧（均循环）",
+  "frames": [
+    {
+      "id": "walk_0",
+      "pose": {
+        "dy": 1,
+        "lean": -1,
+        "legs": 1,
+        "swing": -2,
+        "skirt": 1,
+        "tail": 0,
+        "arm": [
+          42,
+          27
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          208,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "walk_1",
+      "pose": {
+        "dy": -1,
+        "lean": -1,
+        "legs": 0,
+        "swing": 1,
+        "skirt": -1,
+        "tail": 0,
+        "arm": [
+          40,
+          27
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          214,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "walk_2",
+      "pose": {
+        "dy": 1,
+        "lean": -1,
+        "legs": 2,
+        "swing": 2,
+        "skirt": -1,
+        "tail": 0,
+        "arm": [
+          38,
+          27
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          202,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "walk_3",
+      "pose": {
+        "dy": 0,
+        "lean": -1,
+        "legs": 0,
+        "swing": -1,
+        "skirt": 1,
+        "tail": 0,
+        "arm": [
+          40,
+          27
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          210,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "run_0",
+      "pose": {
+        "dy": 1,
+        "lean": -5,
+        "legs": 4,
+        "swing": -3,
+        "skirt": 2,
+        "tail": 0,
+        "arm": [
+          40,
+          31
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          200,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": "dust",
+        "fx_back": null
+      }
+    },
+    {
+      "id": "run_1",
+      "pose": {
+        "dy": -2,
+        "lean": -6,
+        "legs": 3,
+        "swing": -2,
+        "skirt": -3,
+        "tail": 0,
+        "arm": [
+          42,
+          29
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          188,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "run_2",
+      "pose": {
+        "dy": 1,
+        "lean": -4,
+        "legs": 1,
+        "swing": -3,
+        "skirt": 2,
+        "tail": 0,
+        "arm": [
+          39,
+          32
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          208,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "run_3",
+      "pose": {
+        "dy": 0,
+        "lean": -5,
+        "legs": 2,
+        "swing": -2,
+        "skirt": -2,
+        "tail": 0,
+        "arm": [
+          41,
+          30
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          194,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": "dust",
+        "fx_back": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "title": "金发双马尾女剑士 —— 连招 atk3 突刺 + atk4 回旋斩（各 4 帧）",
+  "size": 64,
+  "frame_size": 64,
+  "palette_size": 16,
+  "layer_order": [
+    "backfx",
+    "hair",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "anchors": {
+    "CX": 32,
+    "HEAD_Y": 8,
+    "HEAD_BOT": 23,
+    "SHOUL_Y": 28,
+    "WAIST_Y": 33,
+    "HIP_Y": 36,
+    "FOOT_Y": 58,
+    "SWORD_LEN": 30
+  },
+  "frames": [
+    {
+      "id": "atk3_0",
+      "action": "atk3",
+      "order": 0,
+      "file": "frames/atk3_0.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "bce6ba9eee6ba10ef696bd9deafb43d4852643feb4818d037045b1d74c26e123",
+      "file_sha256": "5aa52dcdb9f392b483f1b49380b4fa8c70b747db9ca7e95efed816fdd153dd83"
+    },
+    {
+      "id": "atk3_1",
+      "action": "atk3",
+      "order": 1,
+      "file": "frames/atk3_1.png",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "d70f4854ec79597771993bc9be411b73c9ddf127ef04dde050e0c362c2d4de3d",
+      "file_sha256": "80193fbb8ed77d7bdd9105bf2a6f50c2ac5519a562ded3b13ca1352493ce3345"
+    },
+    {
+      "id": "atk3_2",
+      "action": "atk3",
+      "order": 2,
+      "file": "frames/atk3_2.png",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "2854e4b547717b64cc44153d8ad060af12b59c2dc5ff73e45af63ace0a01a69d",
+      "file_sha256": "ee8b77f909711d0de09afeb4a138cfa8904b06de47d129bb1efce93f6dfb46f9"
+    },
+    {
+      "id": "atk3_3",
+      "action": "atk3",
+      "order": 3,
+      "file": "frames/atk3_3.png",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "1c26e3c82b4d9167948957bdcfd4cafd1e7ac171e9f76e59c6b75f3b87982bb5",
+      "file_sha256": "600e16a5385024cfb4ff38ae9e871453f049fe0fde79450d996fad6003f3d782"
+    },
+    {
+      "id": "atk4_0",
+      "action": "atk4",
+      "order": 4,
+      "file": "frames/atk4_0.png",
+      "rect": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "1c26e3c82b4d9167948957bdcfd4cafd1e7ac171e9f76e59c6b75f3b87982bb5",
+      "file_sha256": "600e16a5385024cfb4ff38ae9e871453f049fe0fde79450d996fad6003f3d782"
+    },
+    {
+      "id": "atk4_1",
+      "action": "atk4",
+      "order": 5,
+      "file": "frames/atk4_1.png",
+      "rect": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "6d170f0fbdefec631c69f7bcd6e066471363b336916b4ee885b43a4a9c8fc482",
+      "file_sha256": "099635b6467841dc64102e1c40741064a0ca1de40d2d989dc38a5c2de73a73a9"
+    },
+    {
+      "id": "atk4_2",
+      "action": "atk4",
+      "order": 6,
+      "file": "frames/atk4_2.png",
+      "rect": [
+        384,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "4426632f936b207a662c0803bddb0ac5c19c008da6aac9ca9114b36054689b7b",
+      "file_sha256": "19c4bc6d0d64331aec7c0046477c980dd5f055d31f1b1874b36670de02997af6"
+    },
+    {
+      "id": "atk4_3",
+      "action": "atk4",
+      "order": 7,
+      "file": "frames/atk4_3.png",
+      "rect": [
+        448,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "ff5e85f6aa272f9a8f68ce74f8a37cdddb03892740e9803100a47801079193a6",
+      "file_sha256": "2ab9d4df0b62353fcc5bc720903fd13929d83c233e62b7ed762e42794b670409"
+    }
+  ]
+}

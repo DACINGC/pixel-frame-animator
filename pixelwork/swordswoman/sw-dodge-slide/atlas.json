@@ -1,0 +1,137 @@
+{
+  "title": "金发双马尾女剑士 —— 闪避 4 帧（后跳步）+ 滑铲 4 帧（循环）",
+  "size": 64,
+  "frame_size": 64,
+  "palette_size": 16,
+  "layer_order": [
+    "backfx",
+    "hair",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "anchors": {
+    "CX": 32,
+    "HEAD_Y": 8,
+    "HEAD_BOT": 23,
+    "SHOUL_Y": 28,
+    "WAIST_Y": 33,
+    "HIP_Y": 36,
+    "FOOT_Y": 58,
+    "SWORD_LEN": 30
+  },
+  "frames": [
+    {
+      "id": "dodge_0",
+      "action": "dodge",
+      "order": 0,
+      "file": "frames/dodge_0.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "60636f92c9e6e8899663d700c87c02ed8aef3741077fdf9de79653cfdd66e447",
+      "file_sha256": "5d6d26e7134d89837ca345b345a0729510944d8f4a3330d7a9f151947d8ab72a"
+    },
+    {
+      "id": "dodge_1",
+      "action": "dodge",
+      "order": 1,
+      "file": "frames/dodge_1.png",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "c19333ad978a43a08fdfdbba72f1ecf4a56f6c7fb68857df6dd96ea4f756814e",
+      "file_sha256": "59b7c907dd3e891bc0fc2ac9834ad0097af5358632f2b4d648be90628c42a7d9"
+    },
+    {
+      "id": "dodge_2",
+      "action": "dodge",
+      "order": 2,
+      "file": "frames/dodge_2.png",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "cae7398e25fe14bcb9c25eeb2f8f2fbf170ab1014f317619ff0c705232d079c5",
+      "file_sha256": "a9d5f7e0888fe2b54c8a29b135e9661f90f5efe1bbdf620ef6a772f4a54261c0"
+    },
+    {
+      "id": "dodge_3",
+      "action": "dodge",
+      "order": 3,
+      "file": "frames/dodge_3.png",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "17153efb422e017e9a93adbcfff6e8efa321298533a3e9443c514ef0ffaeafba",
+      "file_sha256": "265700bc35fac36bcb284d9ee42f2eada66905e8f9fe748e288aeb0c504dc3f8"
+    },
+    {
+      "id": "slide_0",
+      "action": "slide",
+      "order": 4,
+      "file": "frames/slide_0.png",
+      "rect": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "acd4a47a4058e2998b4b93679a7d3b2aee4ee527a11463b9e015002cadfd2157",
+      "file_sha256": "896ed48879e977411f8e9d617f27b0ca72fbb6d2f63ccaa40c706681fa2113c1"
+    },
+    {
+      "id": "slide_1",
+      "action": "slide",
+      "order": 5,
+      "file": "frames/slide_1.png",
+      "rect": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "14671b05590bead5502d3cb0c5126651f391168576ac3378d511769cc0f7e993",
+      "file_sha256": "8fd5a66c4d860bf40ac272decd27537ac6ded810bbb5f1056aa9a7e4a16e3330"
+    },
+    {
+      "id": "slide_2",
+      "action": "slide",
+      "order": 6,
+      "file": "frames/slide_2.png",
+      "rect": [
+        384,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "2f5f5d3162ef64d518b113f9924f709d2138f82cfe4696e65b23b1a1f4dd59a2",
+      "file_sha256": "221c0915d6118ff71257629c39e3c2b7a2eedd6034cc1f398ab141ac23037b3e"
+    },
+    {
+      "id": "slide_3",
+      "action": "slide",
+      "order": 7,
+      "file": "frames/slide_3.png",
+      "rect": [
+        448,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "1ebec91d479a5f8c784b6ee9d29d8e3d70261452e4f37c4e6d00bcce452a562a",
+      "file_sha256": "0e0d6ce97a1bd90b9f8c03720f9108420b32bef9ba99303e2b2857fe6f0f9fb3"
+    }
+  ]
+}

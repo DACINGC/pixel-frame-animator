@@ -1,0 +1,137 @@
+{
+  "title": "金发双马尾女剑士 —— 连招 atk1 横斩 + atk2 上挑（各 4 帧）",
+  "size": 64,
+  "frame_size": 64,
+  "palette_size": 16,
+  "layer_order": [
+    "backfx",
+    "hair",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "anchors": {
+    "CX": 32,
+    "HEAD_Y": 8,
+    "HEAD_BOT": 23,
+    "SHOUL_Y": 28,
+    "WAIST_Y": 33,
+    "HIP_Y": 36,
+    "FOOT_Y": 58,
+    "SWORD_LEN": 30
+  },
+  "frames": [
+    {
+      "id": "atk1_0",
+      "action": "atk1",
+      "order": 0,
+      "file": "frames/atk1_0.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "0cbf6cb23c43de36dc945fca4ac24fcf16dcd65bab981c657ecef034c7b0b491",
+      "file_sha256": "093855395c9c718df40a5459d16fa22497667cfeda9766173e0ee0dda665cb04"
+    },
+    {
+      "id": "atk1_1",
+      "action": "atk1",
+      "order": 1,
+      "file": "frames/atk1_1.png",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "77e725c4d06f6499564091c3c33a46fc8a448faccd5adcd7392a83cca044a7cc",
+      "file_sha256": "439e7b16f5a8f26920f315d2b398eb900a0d6567131293493e2af38533672f30"
+    },
+    {
+      "id": "atk1_2",
+      "action": "atk1",
+      "order": 2,
+      "file": "frames/atk1_2.png",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "5bfda3418e2e2f927573c3bd29fa1d19c07b555013a2901bc611618c903bcc25",
+      "file_sha256": "5170404567f4656a69888361dade1a54e35fe7e12ce22cab56fc1df0b47a4e67"
+    },
+    {
+      "id": "atk1_3",
+      "action": "atk1",
+      "order": 3,
+      "file": "frames/atk1_3.png",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "403da4e27a94f8ae531fe7a85beb4e5c6854e445d75fdd0581c15b376ba10a72",
+      "file_sha256": "10a613afed554ed177ddfec2962ffc19ff44b178bf6ebdf858c01f75f0319252"
+    },
+    {
+      "id": "atk2_0",
+      "action": "atk2",
+      "order": 4,
+      "file": "frames/atk2_0.png",
+      "rect": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "403da4e27a94f8ae531fe7a85beb4e5c6854e445d75fdd0581c15b376ba10a72",
+      "file_sha256": "10a613afed554ed177ddfec2962ffc19ff44b178bf6ebdf858c01f75f0319252"
+    },
+    {
+      "id": "atk2_1",
+      "action": "atk2",
+      "order": 5,
+      "file": "frames/atk2_1.png",
+      "rect": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "8a2e928290ac26eb0ffb31f786470b79ed39713335ea0fa85bed93c904be3e3b",
+      "file_sha256": "820419e214f0e4ed2f5822f0819ea2c02b1be34766db0339638131890b6a25b2"
+    },
+    {
+      "id": "atk2_2",
+      "action": "atk2",
+      "order": 6,
+      "file": "frames/atk2_2.png",
+      "rect": [
+        384,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "952d8065fed1c0ded894c49077ccf331f3ec087751ceeb675307bb00bf8d8e8d",
+      "file_sha256": "34e6b8ed26c76bad661f7f3fffa5d20f74e058390844c42023e54cf20381ea73"
+    },
+    {
+      "id": "atk2_3",
+      "action": "atk2",
+      "order": 7,
+      "file": "frames/atk2_3.png",
+      "rect": [
+        448,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "bce6ba9eee6ba10ef696bd9deafb43d4852643feb4818d037045b1d74c26e123",
+      "file_sha256": "5aa52dcdb9f392b483f1b49380b4fa8c70b747db9ca7e95efed816fdd153dd83"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "title": "金发双马尾女剑士 —— 连招 atk5 下劈终结（4 帧，非循环）",
+  "size": 64,
+  "frame_size": 64,
+  "palette_size": 16,
+  "layer_order": [
+    "backfx",
+    "hair",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "anchors": {
+    "CX": 32,
+    "HEAD_Y": 8,
+    "HEAD_BOT": 23,
+    "SHOUL_Y": 28,
+    "WAIST_Y": 33,
+    "HIP_Y": 36,
+    "FOOT_Y": 58,
+    "SWORD_LEN": 30
+  },
+  "frames": [
+    {
+      "id": "atk5_0",
+      "action": "atk5",
+      "order": 0,
+      "file": "frames/atk5_0.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "ff5e85f6aa272f9a8f68ce74f8a37cdddb03892740e9803100a47801079193a6",
+      "file_sha256": "2ab9d4df0b62353fcc5bc720903fd13929d83c233e62b7ed762e42794b670409"
+    },
+    {
+      "id": "atk5_1",
+      "action": "atk5",
+      "order": 1,
+      "file": "frames/atk5_1.png",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "06ce44c410085fb1e787fb220e9f2f643cfceb2348728bb2dc19ea1b20ac3f81",
+      "file_sha256": "6f0e4431612a2f7c9bcdeaf59e497b5caf33b1253671bac488a72687b4f3d3b8"
+    },
+    {
+      "id": "atk5_2",
+      "action": "atk5",
+      "order": 2,
+      "file": "frames/atk5_2.png",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "3f46dd8c034fe69aeb03fda028e6b99663ec23856018441bb163f3dbf078617c",
+      "file_sha256": "0291c8ccf02039de71e95a4f30757badf890b45aee429f1be916e8174a1a1286"
+    },
+    {
+      "id": "atk5_3",
+      "action": "atk5",
+      "order": 3,
+      "file": "frames/atk5_3.png",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "397ba4b679ee1f4255062d48402a16d83e223b264973397ac2741a0a510f25db",
+      "file_sha256": "cea1e1df2bcce74a0fde4af4018fe9c19dda798fa479d4f2eeb9cf1c6b47843e"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "title": "金发双马尾女剑士 —— 受伤闪烁 4 帧（非循环）",
+  "frames": [
+    {
+      "id": "hurt_0",
+      "pose": {
+        "dy": 2,
+        "lean": -3,
+        "legs": 1,
+        "swing": -2,
+        "skirt": -2,
+        "tail": 0,
+        "arm": [
+          44,
+          30
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          214,
+          30
+        ],
+        "head": "normal",
+        "flash": 1,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "hurt_1",
+      "pose": {
+        "dy": 1,
+        "lean": -2,
+        "legs": 1,
+        "swing": -3,
+        "skirt": -3,
+        "tail": 0,
+        "arm": [
+          45,
+          31
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          208,
+          30
+        ],
+        "head": "normal",
+        "flash": 2,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "hurt_2",
+      "pose": {
+        "dy": -1,
+        "lean": 2,
+        "legs": 2,
+        "swing": 3,
+        "skirt": 2,
+        "tail": 0,
+        "arm": [
+          42,
+          29
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          200,
+          30
+        ],
+        "head": "blink",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "hurt_3",
+      "pose": {
+        "dy": 0,
+        "lean": 0,
+        "legs": 0,
+        "swing": 1,
+        "skirt": 0,
+        "tail": 0,
+        "arm": [
+          41,
+          32
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          206,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    }
+  ]
+}

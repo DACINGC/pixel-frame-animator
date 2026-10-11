@@ -22,6 +22,14 @@ pixelwork/
 │
 ├── demo/                  ← 模板运行示例输出（示例角色「斗篷剑士」16 帧）
 │
+├── swordswoman/           ← 金发双马尾女剑士：16 动作 / 70 帧 / 10 包（7 子 Agent 并行绘制）
+│   ├── sw_lib.py                  共享造型库（唯一定义源：五层/16色/校验断言）
+│   ├── CONTRACT.md                共享契约（硬约束 + 连招关节帧表）
+│   ├── run.py / pkgs/             运行器 + 10 个只含姿态参数的包脚本
+│   ├── sw-*/                      10 个交付包（frames/atlas/manifest/poses）
+│   ├── _qa/                       check_combo / finalize 校验与总览图
+│   └── README.md                  动作清单 + manifest SHA 登记
+│
 └── _archive/              ← 历史版本，保留不删除（可安全清理）
     ├── fresh/                    v1 行走+跳跃（已被 v2 取代）
     ├── fresh-attack-run/         v1 攻击+奔跑

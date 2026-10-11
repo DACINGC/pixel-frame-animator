@@ -1,0 +1,109 @@
+{
+  "title": "金发双马尾女剑士 —— 死亡 6 帧（非循环）",
+  "size": 64,
+  "frame_size": 64,
+  "palette_size": 16,
+  "layer_order": [
+    "backfx",
+    "hair",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "anchors": {
+    "CX": 32,
+    "HEAD_Y": 8,
+    "HEAD_BOT": 23,
+    "SHOUL_Y": 28,
+    "WAIST_Y": 33,
+    "HIP_Y": 36,
+    "FOOT_Y": 58,
+    "SWORD_LEN": 30
+  },
+  "frames": [
+    {
+      "id": "death_0",
+      "action": "death",
+      "order": 0,
+      "file": "frames/death_0.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "f14a0ca291434e01f520634e7b681632958b6222dcbde00e64fc1d96cee020be",
+      "file_sha256": "037130252e53af483f7645c3b3595050bf66948f9a4b1550d909152331e5ead7"
+    },
+    {
+      "id": "death_1",
+      "action": "death",
+      "order": 1,
+      "file": "frames/death_1.png",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "4946b5d7b6e66273976ba3fd36b817783643d37f4fc89ee7b4672dd71e22b685",
+      "file_sha256": "9cc8955221818e66089500afc91bd0ba8b801a99e9da6a3e4bf7d0d6030835aa"
+    },
+    {
+      "id": "death_2",
+      "action": "death",
+      "order": 2,
+      "file": "frames/death_2.png",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "9fe84636de40a9cda2fb389503e17b5548193be98a6c8a6f21c2855c1d7e3764",
+      "file_sha256": "bac87d31a304e82a7b8857b4a5a355605bde6d8626477dc9f3799784d5ccccd0"
+    },
+    {
+      "id": "death_3",
+      "action": "death",
+      "order": 3,
+      "file": "frames/death_3.png",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "09f8844d681af46f7d76928187e52b1a5b2c76ea6ed22286b944b909028e2369",
+      "file_sha256": "fc8ea116dca5c571d6928f67da4888c15314f3fe466217a935f3ec8e2793630f"
+    },
+    {
+      "id": "death_4",
+      "action": "death",
+      "order": 4,
+      "file": "frames/death_4.png",
+      "rect": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "36c7babbf5e7399407f10997996cbbfd32c8b8729c309621c7175a7f3cbd80c6",
+      "file_sha256": "a2c392b05e513a433224f34a20fb76a12fb7169f71d53831a191a81dfc980a1e"
+    },
+    {
+      "id": "death_5",
+      "action": "death",
+      "order": 5,
+      "file": "frames/death_5.png",
+      "rect": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "a3382de6fd5a4a04e652e1d86038e28a1f62f703afef2fc668ad08b710852811",
+      "file_sha256": "fd50075d62396e26506c5f6144fbd31c64dcf93757e08832951b4d7dc34f4a3f"
+    }
+  ]
+}

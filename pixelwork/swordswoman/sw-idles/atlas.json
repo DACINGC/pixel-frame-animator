@@ -1,0 +1,137 @@
+{
+  "title": "金发双马尾女剑士 —— 待机 4 帧 + 戒备待机 4 帧（均循环）",
+  "size": 64,
+  "frame_size": 64,
+  "palette_size": 16,
+  "layer_order": [
+    "backfx",
+    "hair",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "anchors": {
+    "CX": 32,
+    "HEAD_Y": 8,
+    "HEAD_BOT": 23,
+    "SHOUL_Y": 28,
+    "WAIST_Y": 33,
+    "HIP_Y": 36,
+    "FOOT_Y": 58,
+    "SWORD_LEN": 30
+  },
+  "frames": [
+    {
+      "id": "idle_0",
+      "action": "idle",
+      "order": 0,
+      "file": "frames/idle_0.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "ae066cfcc3b8dab6cf2daddd38d2132fac96cc155f2f1dd1041a9fc84ca4152d",
+      "file_sha256": "9e5f188bed8588814e1420a8ddcddb6605ca165f2a1774af41a61f58cab88324"
+    },
+    {
+      "id": "idle_1",
+      "action": "idle",
+      "order": 1,
+      "file": "frames/idle_1.png",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "a26ef32a3b6a5ba927c96b52aa12eb5cb53346ea3873b6b810a2c9015a616c44",
+      "file_sha256": "9877b56a5b63ceb2807f658f8639dc9e0e5d1a2cc0b22cacf019858d4069f5b1"
+    },
+    {
+      "id": "idle_2",
+      "action": "idle",
+      "order": 2,
+      "file": "frames/idle_2.png",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "53f2c161f36d9bac18a0e698f1aa1b22d2eb340ae3276c28b6023b59c1161506",
+      "file_sha256": "a550c5983c4f51f6d1c36b0334f7b211073c85b9c88ab4ef4d8d519908cb796b"
+    },
+    {
+      "id": "idle_3",
+      "action": "idle",
+      "order": 3,
+      "file": "frames/idle_3.png",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "c7dc5bb84f61417131d55d10dcb89f95f4f0aaa26142dc2d5c8087eb3ab38184",
+      "file_sha256": "c329a04bb31517fc4a98b1a0207180b5b4be73f663305732aabceb20176cbbca"
+    },
+    {
+      "id": "idle-guard_0",
+      "action": "idle-guard",
+      "order": 4,
+      "file": "frames/idle-guard_0.png",
+      "rect": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "a07eb2de7b1ba0820594bb7052302f9812fe8a163b4d1685ca7eeba820d2300c",
+      "file_sha256": "81dfe8ed626f70fc0414ead465bf2421a5ae2008355aece8ea6559a418bfdc1a"
+    },
+    {
+      "id": "idle-guard_1",
+      "action": "idle-guard",
+      "order": 5,
+      "file": "frames/idle-guard_1.png",
+      "rect": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "8cc8fe01e72d291029de78aaba0c93cf8e7ded2ce4652b42db2e13e7eebf2017",
+      "file_sha256": "3b73a6b9991b48646055fe87cab6b85ff2286f1a409efa29dc23f6b4fb5a94d4"
+    },
+    {
+      "id": "idle-guard_2",
+      "action": "idle-guard",
+      "order": 6,
+      "file": "frames/idle-guard_2.png",
+      "rect": [
+        384,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "2c612cde58005024965c1708688a04424b8238ed64be05bc68393923bb9d487e",
+      "file_sha256": "ed0e0caefb50281eeb4b463df235f1d4fecde21533d77f86d3d9d1a4f50b5aa9"
+    },
+    {
+      "id": "idle-guard_3",
+      "action": "idle-guard",
+      "order": 7,
+      "file": "frames/idle-guard_3.png",
+      "rect": [
+        448,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "a74d3e35f97c24765f5a045376aa7bf6918f5f8b53aad51d9e0e22e024dba5f6",
+      "file_sha256": "68bf29d923aecf992ec4b1b3c607606b4e2a35bcbd37e63b8f3e7b61d8473593"
+    }
+  ]
+}

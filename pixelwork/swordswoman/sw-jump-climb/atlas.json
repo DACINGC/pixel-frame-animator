@@ -1,0 +1,137 @@
+{
+  "title": "金发双马尾女剑士 —— 跳跃 4 帧（单次起落）+ 攀爬 4 帧（循环）",
+  "size": 64,
+  "frame_size": 64,
+  "palette_size": 16,
+  "layer_order": [
+    "backfx",
+    "hair",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "anchors": {
+    "CX": 32,
+    "HEAD_Y": 8,
+    "HEAD_BOT": 23,
+    "SHOUL_Y": 28,
+    "WAIST_Y": 33,
+    "HIP_Y": 36,
+    "FOOT_Y": 58,
+    "SWORD_LEN": 30
+  },
+  "frames": [
+    {
+      "id": "jump_0",
+      "action": "jump",
+      "order": 0,
+      "file": "frames/jump_0.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "20e571dd9c80a0ae870afccf31cf83fceab959b81e5a7364a7d05a760190c389",
+      "file_sha256": "3656989044a71b835d757a37f2701d2fe0e70b0225a24696d42137d6effb2a77"
+    },
+    {
+      "id": "jump_1",
+      "action": "jump",
+      "order": 1,
+      "file": "frames/jump_1.png",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "0d40a8d0bd3ff0af691dd2df3a29e0c5c0f13a3318c09cd21a573f1cc547bfac",
+      "file_sha256": "7e152c38b4ece9bb19a05a9d49b1078c2d399f13a6e0dce34262abdd70b4a79f"
+    },
+    {
+      "id": "jump_2",
+      "action": "jump",
+      "order": 2,
+      "file": "frames/jump_2.png",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "d091bbf7f55f05820c71addb615cf5e9a0813e7a213edd595f39050bc51fdc33",
+      "file_sha256": "6fb23c529b9ce3dff3cb055ea9e6d9e0ff698202dcf4286834501f813a39a40c"
+    },
+    {
+      "id": "jump_3",
+      "action": "jump",
+      "order": 3,
+      "file": "frames/jump_3.png",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "daef0c59285e2186dd08ab65890667a95e8f3f2b260e1b0d31b8db7b1c805b00",
+      "file_sha256": "fdfb78e472450b41ffe7b42fbc3311467cb049be51470ddfc3daa7cc3ec5439f"
+    },
+    {
+      "id": "climb_0",
+      "action": "climb",
+      "order": 4,
+      "file": "frames/climb_0.png",
+      "rect": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "7c0aa3fc5d422220a2a8398ad6ebc4bb88e8330eed3e969fd13f0d85e4363eb6",
+      "file_sha256": "bbf0978c61617706c05a625098f5c110ead69d3168181243bfff885985ac640f"
+    },
+    {
+      "id": "climb_1",
+      "action": "climb",
+      "order": 5,
+      "file": "frames/climb_1.png",
+      "rect": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "21d9f095f1c3997110b0e6b1c1fbcf1bd665abdbaa5e6e9ea00b1eaae616b662",
+      "file_sha256": "54910b18b4a4467b12a94e0bd20134fd743b77e64f0cbea076e619a4b1b95b4d"
+    },
+    {
+      "id": "climb_2",
+      "action": "climb",
+      "order": 6,
+      "file": "frames/climb_2.png",
+      "rect": [
+        384,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "8d55ee99ef12302c053801ed9a68ae299770c277e1807d60cdf658592ef6545d",
+      "file_sha256": "ce2f9d63920c419e2b7590ffaef5d6b2c77f6616acc5204fcbeb78905ed6a893"
+    },
+    {
+      "id": "climb_3",
+      "action": "climb",
+      "order": 7,
+      "file": "frames/climb_3.png",
+      "rect": [
+        448,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "f477b411d0fa1cabe8fef838101b521c24ffc3cabc7da4d1189c49eb7f3ded0a",
+      "file_sha256": "b1b81205702fd598afd3c70b215e2732f62c392d05c07b97cce6e93a97bd4fa1"
+    }
+  ]
+}

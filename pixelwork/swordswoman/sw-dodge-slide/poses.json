@@ -1,0 +1,213 @@
+{
+  "title": "金发双马尾女剑士 —— 闪避 4 帧（后跳步）+ 滑铲 4 帧（循环）",
+  "frames": [
+    {
+      "id": "dodge_0",
+      "pose": {
+        "dy": 1,
+        "lean": 0,
+        "legs": 2,
+        "swing": -1,
+        "skirt": -1,
+        "tail": 0,
+        "arm": [
+          40,
+          30
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          212,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "dodge_1",
+      "pose": {
+        "dy": -2,
+        "lean": 4,
+        "legs": 3,
+        "swing": 1,
+        "skirt": -2,
+        "tail": 0,
+        "arm": [
+          42,
+          28
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          220,
+          30
+        ],
+        "head": "blink",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "dodge_2",
+      "pose": {
+        "dy": -2,
+        "lean": 12,
+        "legs": 2,
+        "swing": 2,
+        "skirt": 2,
+        "tail": 0,
+        "arm": [
+          43,
+          30
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          300,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": "afterimage",
+        "fx_back": null
+      }
+    },
+    {
+      "id": "dodge_3",
+      "pose": {
+        "dy": 0,
+        "lean": 0,
+        "legs": 0,
+        "swing": 0,
+        "skirt": 0,
+        "tail": 0,
+        "arm": [
+          41,
+          31
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          216,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "slide_0",
+      "pose": {
+        "dy": 1,
+        "lean": 1,
+        "legs": 5,
+        "swing": -1,
+        "skirt": -1,
+        "tail": 0,
+        "arm": [
+          45,
+          32
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          196,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": "dust",
+        "fx_back": null
+      }
+    },
+    {
+      "id": "slide_1",
+      "pose": {
+        "dy": 1,
+        "lean": 0,
+        "legs": 7,
+        "swing": -2,
+        "skirt": 0,
+        "tail": 0,
+        "arm": [
+          46,
+          33
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          193,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "slide_2",
+      "pose": {
+        "dy": 2,
+        "lean": 0,
+        "legs": 7,
+        "swing": -3,
+        "skirt": 3,
+        "tail": 0,
+        "arm": [
+          46,
+          34
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          190,
+          30
+        ],
+        "head": "blink",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "slide_3",
+      "pose": {
+        "dy": 1,
+        "lean": 0,
+        "legs": 7,
+        "swing": -2,
+        "skirt": 1,
+        "tail": 0,
+        "arm": [
+          45,
+          33
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          186,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    }
+  ]
+}

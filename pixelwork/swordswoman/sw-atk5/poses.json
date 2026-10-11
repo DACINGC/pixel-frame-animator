@@ -1,0 +1,109 @@
+{
+  "title": "金发双马尾女剑士 —— 连招 atk5 下劈终结（4 帧，非循环）",
+  "frames": [
+    {
+      "id": "atk5_0",
+      "pose": {
+        "dy": 1,
+        "lean": 0,
+        "legs": 1,
+        "swing": 1,
+        "skirt": -2,
+        "tail": 0,
+        "arm": [
+          41,
+          33
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          212,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "atk5_1",
+      "pose": {
+        "dy": 3,
+        "lean": -1,
+        "legs": 6,
+        "swing": -1,
+        "skirt": -1,
+        "tail": -1,
+        "arm": [
+          45,
+          34
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          98,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "atk5_2",
+      "pose": {
+        "dy": 2,
+        "lean": 4,
+        "legs": 4,
+        "swing": -2,
+        "skirt": 1,
+        "tail": -2,
+        "arm": [
+          40,
+          27
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          255,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": "slash-heavy",
+        "fx_back": null
+      }
+    },
+    {
+      "id": "atk5_3",
+      "pose": {
+        "dy": 0,
+        "lean": 1,
+        "legs": 1,
+        "swing": 1,
+        "skirt": 1,
+        "tail": 0,
+        "arm": [
+          41,
+          30
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          260,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": "dust",
+        "fx_back": null
+      }
+    }
+  ]
+}

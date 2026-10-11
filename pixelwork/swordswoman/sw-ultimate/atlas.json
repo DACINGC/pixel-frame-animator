@@ -1,0 +1,137 @@
+{
+  "title": "金发双马尾女剑士 —— 大招 8 帧（非循环）",
+  "size": 64,
+  "frame_size": 64,
+  "palette_size": 16,
+  "layer_order": [
+    "backfx",
+    "hair",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "anchors": {
+    "CX": 32,
+    "HEAD_Y": 8,
+    "HEAD_BOT": 23,
+    "SHOUL_Y": 28,
+    "WAIST_Y": 33,
+    "HIP_Y": 36,
+    "FOOT_Y": 58,
+    "SWORD_LEN": 30
+  },
+  "frames": [
+    {
+      "id": "ultimate_0",
+      "action": "ultimate",
+      "order": 0,
+      "file": "frames/ultimate_0.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "933300b4707de886f48a4e99aa0dcbfbe98f1a4dc157999570bd5e146a1e0f80",
+      "file_sha256": "e43b625fcffe04139fbd76a47784a5206477acb7c23c3a3db3bb78ffc8f26f36"
+    },
+    {
+      "id": "ultimate_1",
+      "action": "ultimate",
+      "order": 1,
+      "file": "frames/ultimate_1.png",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "d71011c43eb01c2673ff2b62512a0e6e08ca43336bd6dcfcd84ef5311402d6a3",
+      "file_sha256": "73a75f405142f69c3ed30bd45297d763ba739e4e31059f0a2c7c5048ed70c745"
+    },
+    {
+      "id": "ultimate_2",
+      "action": "ultimate",
+      "order": 2,
+      "file": "frames/ultimate_2.png",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "4875bfe2f5375f4193258ea6e4a0da838706af10136414e983813057953b05dc",
+      "file_sha256": "cf6ae4a1afc4c22fde2dd003c76bed1e3b0f265683e9a964d5f399e1176f64da"
+    },
+    {
+      "id": "ultimate_3",
+      "action": "ultimate",
+      "order": 3,
+      "file": "frames/ultimate_3.png",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "8b4f91e1ebb5b098c3074e8cacc5ef162251558feda9a57834dddcece0b1acfa",
+      "file_sha256": "1fba64900b2662d6b28b1ba65faddb0f87470930dbecae189fd4bbc32e84f17e"
+    },
+    {
+      "id": "ultimate_4",
+      "action": "ultimate",
+      "order": 4,
+      "file": "frames/ultimate_4.png",
+      "rect": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "c83e689bf3f6b264f8d83438bf922a96451cd1c65393d792d15d860843d71bdc",
+      "file_sha256": "195f6ea40f66b71d358b420045f50ec8424bf6f9fc08b40e7fed50bc359a8061"
+    },
+    {
+      "id": "ultimate_5",
+      "action": "ultimate",
+      "order": 5,
+      "file": "frames/ultimate_5.png",
+      "rect": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "bcb804aca2dda6e354fc84697b0e59df57c464108229f47c7a435e49c01296b2",
+      "file_sha256": "3eca011d8cb62bd4375648b64c44f0f1bb856d1a215a5959add56eb136a9ea83"
+    },
+    {
+      "id": "ultimate_6",
+      "action": "ultimate",
+      "order": 6,
+      "file": "frames/ultimate_6.png",
+      "rect": [
+        384,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "24d08ee73b57fb41ed88013909bf89d368c5591f2d683f970fcb1b05deb0ad70",
+      "file_sha256": "e172326a510b35c50ccd73839cd824228eebd20921997972fad0999010c34d53"
+    },
+    {
+      "id": "ultimate_7",
+      "action": "ultimate",
+      "order": 7,
+      "file": "frames/ultimate_7.png",
+      "rect": [
+        448,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "bee82b759dcf24d111d919764782185801afebfa96761e8144279c26f1210e2e",
+      "file_sha256": "628ffc0686143e5cd5493a879214307f998bcaead0bb0e535ed9eaa5106e6c22"
+    }
+  ]
+}

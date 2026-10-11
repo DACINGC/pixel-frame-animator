@@ -1,0 +1,213 @@
+{
+  "title": "金发双马尾女剑士 —— 连招 atk1 横斩 + atk2 上挑（各 4 帧）",
+  "frames": [
+    {
+      "id": "atk1_0",
+      "pose": {
+        "dy": 1,
+        "lean": 1,
+        "legs": 0,
+        "swing": -2,
+        "skirt": -1,
+        "tail": 0,
+        "arm": [
+          36,
+          32
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          315,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "atk1_1",
+      "pose": {
+        "dy": 2,
+        "lean": 3,
+        "legs": 1,
+        "swing": -3,
+        "skirt": -2,
+        "tail": 0,
+        "arm": [
+          38,
+          29
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          55,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "atk1_2",
+      "pose": {
+        "dy": 0,
+        "lean": 2,
+        "legs": 1,
+        "swing": 2,
+        "skirt": -2,
+        "tail": 0,
+        "arm": [
+          38,
+          31
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          168,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": "slash-wide",
+        "fx_back": null
+      }
+    },
+    {
+      "id": "atk1_3",
+      "pose": {
+        "dy": 0,
+        "lean": -1,
+        "legs": 2,
+        "swing": 1,
+        "skirt": 2,
+        "tail": 0,
+        "arm": [
+          38,
+          31
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          220,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "atk2_0",
+      "pose": {
+        "dy": 0,
+        "lean": -1,
+        "legs": 2,
+        "swing": 1,
+        "skirt": 2,
+        "tail": 0,
+        "arm": [
+          38,
+          31
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          220,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "atk2_1",
+      "pose": {
+        "dy": 2,
+        "lean": -2,
+        "legs": 5,
+        "swing": -1,
+        "skirt": 1,
+        "tail": 0,
+        "arm": [
+          40,
+          31
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          240,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "atk2_2",
+      "pose": {
+        "dy": -2,
+        "lean": -4,
+        "legs": 4,
+        "swing": -2,
+        "skirt": -2,
+        "tail": 0,
+        "arm": [
+          44,
+          34
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          105,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": "slash-up",
+        "fx_back": null
+      }
+    },
+    {
+      "id": "atk2_3",
+      "pose": {
+        "dy": -1,
+        "lean": -2,
+        "legs": 2,
+        "swing": 2,
+        "skirt": 1,
+        "tail": 0,
+        "arm": [
+          45,
+          34
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          98,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    }
+  ]
+}

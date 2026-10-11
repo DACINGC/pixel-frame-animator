@@ -1,0 +1,137 @@
+{
+  "title": "金发双马尾女剑士 —— 行走 4 帧 + 奔跑 4 帧（均循环）",
+  "size": 64,
+  "frame_size": 64,
+  "palette_size": 16,
+  "layer_order": [
+    "backfx",
+    "hair",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "anchors": {
+    "CX": 32,
+    "HEAD_Y": 8,
+    "HEAD_BOT": 23,
+    "SHOUL_Y": 28,
+    "WAIST_Y": 33,
+    "HIP_Y": 36,
+    "FOOT_Y": 58,
+    "SWORD_LEN": 30
+  },
+  "frames": [
+    {
+      "id": "walk_0",
+      "action": "walk",
+      "order": 0,
+      "file": "frames/walk_0.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "38eec15d042731fae9d3e7ce464d77c67460b7d8a433b9f9b93557281ad3f3b8",
+      "file_sha256": "6ce69e0affd5b4059a7bcf8b9dbb2793b8f33f2919205ef4b3e90fc4067ce363"
+    },
+    {
+      "id": "walk_1",
+      "action": "walk",
+      "order": 1,
+      "file": "frames/walk_1.png",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "692ffcfbf0155deed6fc1b8fd8a86345def4f7bd28ed4d3b40584bb2e193db5d",
+      "file_sha256": "76b479e88d279c5d5db48691be3db34640efe58b6a3e512524572499698b7e9d"
+    },
+    {
+      "id": "walk_2",
+      "action": "walk",
+      "order": 2,
+      "file": "frames/walk_2.png",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "ba3c31adba38fcd92d90f2732a94d54ad095d9f88d32af5764487c7906d5b8d6",
+      "file_sha256": "274edf29ad69a11237213fb5bc782839448511c968f0a12c3f53eb7f491af2e1"
+    },
+    {
+      "id": "walk_3",
+      "action": "walk",
+      "order": 3,
+      "file": "frames/walk_3.png",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "94f8fcf046cd091bd512d9eeada763e038962faa2ddc7476283f0e28be1ee7d2",
+      "file_sha256": "7799163a2e35a54b081aa10374ec976d2e1a920da15f5658018d30dcba43a97b"
+    },
+    {
+      "id": "run_0",
+      "action": "run",
+      "order": 4,
+      "file": "frames/run_0.png",
+      "rect": [
+        256,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "a39074a3c0252669183c87175d8de11f9d46245cb8372eca75d3ccf8b0a7c748",
+      "file_sha256": "80762b5e1aa24b945e0489d4ae1c25736aff16c001e2aacd4178ca991167be1c"
+    },
+    {
+      "id": "run_1",
+      "action": "run",
+      "order": 5,
+      "file": "frames/run_1.png",
+      "rect": [
+        320,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "a44399e56dbf79cadc830ed05bf0819a803782d36df46dfd6f7059dfdd40725d",
+      "file_sha256": "91f6c0dbce5d7ffb870d42e9a48e5ff7b57449ff71492216ad8eb12a6b40853b"
+    },
+    {
+      "id": "run_2",
+      "action": "run",
+      "order": 6,
+      "file": "frames/run_2.png",
+      "rect": [
+        384,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "69e19ff72648a99155ecb419e61d6514052c6fd86c6a816c9359f8d8d6b04254",
+      "file_sha256": "6377a3e4f20de04b93e9741e0dde5aaf30bd92e2ddb0229e4cf89c74243e0b5c"
+    },
+    {
+      "id": "run_3",
+      "action": "run",
+      "order": 7,
+      "file": "frames/run_3.png",
+      "rect": [
+        448,
+        0,
+        64,
+        64
+      ],
+      "rgba_sha256": "8a7a304822c78198681061247fe838d914da3bd81984547e8016ad1d42c0e871",
+      "file_sha256": "be7696604a344269a11adc955757153e78f89d52a10bfd6e00dc64e80a1f6ed1"
+    }
+  ]
+}

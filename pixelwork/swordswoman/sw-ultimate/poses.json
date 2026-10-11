@@ -1,0 +1,213 @@
+{
+  "title": "金发双马尾女剑士 —— 大招 8 帧（非循环）",
+  "frames": [
+    {
+      "id": "ultimate_0",
+      "pose": {
+        "dy": 1,
+        "lean": 0,
+        "legs": 0,
+        "swing": 1,
+        "skirt": -1,
+        "tail": 0,
+        "arm": [
+          40,
+          34
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          222,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "ultimate_1",
+      "pose": {
+        "dy": 0,
+        "lean": -2,
+        "legs": 1,
+        "swing": -2,
+        "skirt": -2,
+        "tail": -1,
+        "arm": [
+          44,
+          33
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          97,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": null
+      }
+    },
+    {
+      "id": "ultimate_2",
+      "pose": {
+        "dy": 1,
+        "lean": -2,
+        "legs": 1,
+        "swing": -3,
+        "skirt": -3,
+        "tail": -3,
+        "arm": [
+          44,
+          32
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          99,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": "charge",
+        "fx_back": null
+      }
+    },
+    {
+      "id": "ultimate_3",
+      "pose": {
+        "dy": -1,
+        "lean": -2,
+        "legs": 2,
+        "swing": -2,
+        "skirt": -2,
+        "tail": -4,
+        "arm": [
+          45,
+          33
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          96,
+          30
+        ],
+        "head": "glow",
+        "flash": 2,
+        "fx": "charge",
+        "fx_back": null
+      }
+    },
+    {
+      "id": "ultimate_4",
+      "pose": {
+        "dy": 1,
+        "lean": 6,
+        "legs": 4,
+        "swing": -2,
+        "skirt": 2,
+        "tail": 2,
+        "arm": [
+          38,
+          30
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          245,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": "dust",
+        "fx_back": null
+      }
+    },
+    {
+      "id": "ultimate_5",
+      "pose": {
+        "dy": 0,
+        "lean": 3,
+        "legs": 4,
+        "swing": 2,
+        "skirt": 3,
+        "tail": -1,
+        "arm": [
+          40,
+          30
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          240,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": null,
+        "fx_back": "burst-wide"
+      }
+    },
+    {
+      "id": "ultimate_6",
+      "pose": {
+        "dy": 1,
+        "lean": 1,
+        "legs": 2,
+        "swing": 2,
+        "skirt": 0,
+        "tail": -2,
+        "arm": [
+          40,
+          29
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          232,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": "spark",
+        "fx_back": null
+      }
+    },
+    {
+      "id": "ultimate_7",
+      "pose": {
+        "dy": 0,
+        "lean": 0,
+        "legs": 0,
+        "swing": 0,
+        "skirt": 0,
+        "tail": 0,
+        "arm": [
+          41,
+          34
+        ],
+        "back_arm": null,
+        "sword": [
+          0,
+          0,
+          226,
+          30
+        ],
+        "head": "normal",
+        "flash": 0,
+        "fx": "spark",
+        "fx_back": null
+      }
+    }
+  ]
+}

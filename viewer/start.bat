@@ -1,5 +1,5 @@
 @echo off
-chcp 65001 >nul
+rem ASCII only. UTF-8 text makes cmd.exe split "%~dp0" into the bogus command p0".
 cd /d "%~dp0"
 
 set "PY="
@@ -8,11 +8,11 @@ if not defined PY (where py >nul 2>nul && set "PY=py -3")
 if not defined PY set "PY=%USERPROFILE%\.workbuddy\binaries\python\versions\3.13.12\python.exe"
 
 if not defined PY (
-  echo [x] 未找到 Python，请先安装 Python 3 并加入 PATH
+  echo [x] Python was not found. Install Python 3 and add it to PATH.
   pause
   exit /b 1
 )
 
-echo [i] 使用解释器: %PY%
+echo [i] Python: %PY%
 %PY% serve.py %*
 if errorlevel 1 pause

@@ -1,0 +1,125 @@
+{
+  "size": [
+    256,
+    32
+  ],
+  "frame_size": 32,
+  "palette_size": 16,
+  "layer_order": [
+    "back",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "pack": "special",
+  "actions": [
+    "roar",
+    "summon"
+  ],
+  "frames": [
+    {
+      "id": "roar_0",
+      "action": "roar",
+      "order": 0,
+      "file": "frames/roar_0.png",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "4e62c951bdd22a9b0333e70c94760d358c075f21e11cef783fd16715f8dbd7fe"
+    },
+    {
+      "id": "roar_1",
+      "action": "roar",
+      "order": 1,
+      "file": "frames/roar_1.png",
+      "rect": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "89b07a80de20fa100a6dc44f2088ec1f1ec81b7e01be7717129f5aa25fba7cac"
+    },
+    {
+      "id": "roar_2",
+      "action": "roar",
+      "order": 2,
+      "file": "frames/roar_2.png",
+      "rect": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "3378cece425faba746f36bfc7e6f1de9eac9ce227fb61c7ced2f1d99797e38fd"
+    },
+    {
+      "id": "roar_3",
+      "action": "roar",
+      "order": 3,
+      "file": "frames/roar_3.png",
+      "rect": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "03c52b602ab6e892b09613dc52c977ca2dd5e97e2a783b0576b667e4af32cfe6"
+    },
+    {
+      "id": "summon_0",
+      "action": "summon",
+      "order": 4,
+      "file": "frames/summon_0.png",
+      "rect": [
+        128,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "5778dd2b3a2b9f75a317b6eb16909e5d2b7613b8e963c417d00f43b974dcd7c9"
+    },
+    {
+      "id": "summon_1",
+      "action": "summon",
+      "order": 5,
+      "file": "frames/summon_1.png",
+      "rect": [
+        160,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "686da4f7b1366f31d65c4714a6ed339a7676888bf1d1f94185ea3ecfb6587d39"
+    },
+    {
+      "id": "summon_2",
+      "action": "summon",
+      "order": 6,
+      "file": "frames/summon_2.png",
+      "rect": [
+        192,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "0e12ea675d95dbbf6ab68d79e95525ec46e61b694b68e4be583545f41bf83703"
+    },
+    {
+      "id": "summon_3",
+      "action": "summon",
+      "order": 7,
+      "file": "frames/summon_3.png",
+      "rect": [
+        224,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "275184276d6435c076644bfa89b4bd8d2883635018a6cbead10da9d710cece3b"
+    }
+  ]
+}

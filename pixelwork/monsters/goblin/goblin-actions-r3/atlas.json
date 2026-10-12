@@ -1,0 +1,209 @@
+{
+  "size": [
+    448,
+    32
+  ],
+  "frame_size": 32,
+  "palette_size": 14,
+  "layer_order": [
+    "back",
+    "body",
+    "weapon",
+    "fx"
+  ],
+  "facing": "left",
+  "anchors": {
+    "FOOT_Y": 28
+  },
+  "fps": 8,
+  "loop": {
+    "walk": true,
+    "attack": false,
+    "hurt": false,
+    "die": false
+  },
+  "frames": [
+    {
+      "id": "walk_0",
+      "action": "walk",
+      "order": 0,
+      "file": "frames/walk_0.png",
+      "rect": [
+        0,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "6498cc4f444747fc1a3ae939ce3deb6ccf5fd69a0ff15e7ea4da427020099eba"
+    },
+    {
+      "id": "walk_1",
+      "action": "walk",
+      "order": 1,
+      "file": "frames/walk_1.png",
+      "rect": [
+        32,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "e69d8419afd60a756f358199a6d6ef6e92bff27d2d652b70e1697602498f23f7"
+    },
+    {
+      "id": "walk_2",
+      "action": "walk",
+      "order": 2,
+      "file": "frames/walk_2.png",
+      "rect": [
+        64,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "283a4c436761aaeb37cc704b63a4226d6257788137369d06ffba7d7fac85c263"
+    },
+    {
+      "id": "walk_3",
+      "action": "walk",
+      "order": 3,
+      "file": "frames/walk_3.png",
+      "rect": [
+        96,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "286a98749af929c085fa3c9ae6ceee6c90d8ef8a5e34b6b3517a4fafbae5e81d"
+    },
+    {
+      "id": "attack_0",
+      "action": "attack",
+      "order": 4,
+      "file": "frames/attack_0.png",
+      "rect": [
+        128,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "2c7ce22fbef4ced3678990d35b300442a97473fb13a1f04bc5eae743cd9a2fd7"
+    },
+    {
+      "id": "attack_1",
+      "action": "attack",
+      "order": 5,
+      "file": "frames/attack_1.png",
+      "rect": [
+        160,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "dbfa600126eb45cb6271f73089410dbe32b7bd670937c400507d5247998eac66"
+    },
+    {
+      "id": "attack_2",
+      "action": "attack",
+      "order": 6,
+      "file": "frames/attack_2.png",
+      "rect": [
+        192,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "be9aef822a45c064dc7a4004d4189493abc725dcb91ad8dc5ce97389b481981f"
+    },
+    {
+      "id": "attack_3",
+      "action": "attack",
+      "order": 7,
+      "file": "frames/attack_3.png",
+      "rect": [
+        224,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "2aa5a9fb11b593da8604fc1bde6bde60f80826e0f433e03ffa974ad08203554b"
+    },
+    {
+      "id": "hurt_0",
+      "action": "hurt",
+      "order": 8,
+      "file": "frames/hurt_0.png",
+      "rect": [
+        256,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "290de03a1549f1c3570188485d704d007efbdcdc4c0084c198795702e0dcac40"
+    },
+    {
+      "id": "hurt_1",
+      "action": "hurt",
+      "order": 9,
+      "file": "frames/hurt_1.png",
+      "rect": [
+        288,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "8dd715f59d077283942a32f192db176897f13afdfc4aa91d824a8f45ed31d9c5"
+    },
+    {
+      "id": "die_0",
+      "action": "die",
+      "order": 10,
+      "file": "frames/die_0.png",
+      "rect": [
+        320,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "c2abe9bf0ca6bb726b8ec5dc7fe6771b0ea4c2716bf0ec346484ab0e5cfb10b5"
+    },
+    {
+      "id": "die_1",
+      "action": "die",
+      "order": 11,
+      "file": "frames/die_1.png",
+      "rect": [
+        352,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "2ebfd8cbb5aee8e7854ce51a66e8200deb538d83aa903291b3f206ef6cd170e8"
+    },
+    {
+      "id": "die_2",
+      "action": "die",
+      "order": 12,
+      "file": "frames/die_2.png",
+      "rect": [
+        384,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "928f7ee7a6d7a3e9f2dcff57ea058f46c2452a609e665a46031d3a046794edd6"
+    },
+    {
+      "id": "die_3",
+      "action": "die",
+      "order": 13,
+      "file": "frames/die_3.png",
+      "rect": [
+        416,
+        0,
+        32,
+        32
+      ],
+      "rgba_sha256": "97a91123b042800ea6d1f7736869ded239866f9d9465d4c7f4a380f731aca1a8"
+    }
+  ]
+}

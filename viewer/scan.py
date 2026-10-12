@@ -356,34 +356,53 @@ def annotate(root: str, sets):
     for st in sets:
         st["fingerprint"] = visual_fingerprint(root, st["frames"])
 
-    # 1) 内容相同的重复组：保留「非归档 + 最新修改 + 路径最短」的那个
-    by_fp = {}
-    for st in sets:
-        by_fp.setdefault(st["fingerprint"], []).append(st)
-    for members in by_fp.values():
-        ids = [m["id"] for m in members]
-        rep = min(members, key=lambda m: (is_archived(m), -int(m.get("updatedAt") or 0),
-                                          len(m["dir"]), m["dir"]))
-        for m in members:
-            m["dupGroup"] = ids
-            m["isDup"] = m["id"] != rep["id"]
-            m["dupOf"] = None if m["id"] == rep["id"] else rep["id"]
-
-    # 2) 同动画的迭代版本（-rN）：按修改时间取最新
+    # 1) 同动画的迭代版本（-rN）：按修改时间取最新。
+    #    必须先算这一步：下面选「重复代表」时要优先照顾各迭代组的最新版，
+    #    否则会出现两条规则各藏一个成员、整个动画集从视图里消失的漏洞。
     by_variant = {}
     for st in sets:
         parent = os.path.dirname(str(st.get("dir") or ""))
         m = REV_SUFFIX_RE.match(str(st.get("name") or ""))
         key = (parent, m.group(1) if m else str(st.get("name")))
         by_variant.setdefault(key, []).append(st)
+    primary_ids = set()
     for members in by_variant.values():
         ordered = sorted(members, key=lambda m: (int(m.get("updatedAt") or 0), rev_number(m), m["dir"]))
         latest = ordered[-1]
+        primary_ids.add(latest["id"])
         ids = [m["id"] for m in ordered]
         for m in members:
             m["variantGroup"] = ids if len(ids) > 1 else None
             m["isLatest"] = m["id"] == latest["id"]
             m["supersededBy"] = None if m["id"] == latest["id"] else latest["id"]
+
+    # 2) 内容相同的重复组：保留「非归档 + 迭代组最新版 + 最新修改 + 路径最短」的那个。
+    #    「是不是迭代组最新版」必须排在路径长度前面：当 -rN 与基础包内容完全相同
+    #    （重新生成未产生任何差异）时，若按旧规则选基础包为代表，就会变成
+    #    基础包被判旧版藏掉、-rN 被判重复藏掉，两条规则各藏一个，整个动画集
+    #    从视图里消失（骷髅怪 skeleton-attack-death、蝙蝠 bat-move-hit 即此案例）。
+    by_fp = {}
+    for st in sets:
+        by_fp.setdefault(st["fingerprint"], []).append(st)
+    for members in by_fp.values():
+        ids = [m["id"] for m in members]
+        rep = min(members, key=lambda m: (is_archived(m),
+                                          0 if m["id"] in primary_ids else 1,
+                                          -int(m.get("updatedAt") or 0),
+                                          len(m["dir"]), m["dir"]))
+        for m in members:
+            m["dupGroup"] = ids
+            m["isDup"] = m["id"] != rep["id"]
+            m["dupOf"] = None if m["id"] == rep["id"] else rep["id"]
+
+    # 3) 安全网：跨迭代组内容相同（极少见）时，上面两条规则理论上仍可能把某个
+    #    迭代组的全部成员都藏掉。此时放回该组最新版，保证每条动画线至少可见一次。
+    for members in by_variant.values():
+        if any(not m.get("isDup") and not m.get("supersededBy") for m in members):
+            continue
+        primary = next(m for m in members if m.get("isLatest"))
+        primary["isDup"] = False
+        primary["dupOf"] = None
     return sets
 
 
